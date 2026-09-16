@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshCart - eCommerce Navbar</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Top Bar -->
+  <header class="top-header py-2">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+
+      <!-- Left messages -->
+      <div class="d-flex align-items-center gap-3 gap-md-4 py-1">
+        <span class="d-flex align-items-center gap-2 top-item">
+          <i class="bi bi-truck text-success"></i>
+          <span>Free Shipping on Orders 500 EGP</span>
+        </span>
+        <span class="d-none d-sm-flex align-items-center gap-2 top-item">
+          <i class="bi bi-gift-fill text-success"></i>
+          <span>New Arrivals Daily</span>
+        </span>
+      </div>
+
+      <!-- Right contact & auth -->
+      <div class="d-flex align-items-center gap-3 gap-md-4 py-1">
+        <a href="tel:+18001234567"
+          class="top-link d-none d-md-flex align-items-center gap-1">
+          <i class="bi bi-telephone-fill" style="font-size: 0.82rem;"></i>
+          <span>+1 (800) 123-4567</span>
+        </a>
+        <a href="mailto:support@freshcart.com"
+          class="top-link d-none d-lg-flex align-items-center gap-1">
+          <i class="bi bi-envelope" style="font-size: 0.9rem;"></i>
+          <span>support@freshcart.com</span>
+        </a>
+        <span class="top-divider d-none d-lg-inline">|</span>
+        <a href="#signin" class="top-link d-flex align-items-center gap-1">
+          <i class="bi bi-person" style="font-size: 1rem;"></i>
+          <span>Sign In</span>
+        </a>
+        <a href="#signup" class="top-link d-flex align-items-center gap-1">
+          <i class="bi bi-person-plus" style="font-size: 1rem;"></i>
+          <span>Sign Up</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-xl bg-white border-bottom sticky-top py-2.5">
+    <div class="container">
+      <!-- Brand Logo -->
+      <a class="navbar-brand d-flex align-items-center me-3 me-xl-4" href="index.html">
+        <img src="./freshcart-logo.svg" alt="FreshCart Logo" height="31" class="d-inline-block align-text-top" />
+      </a>
+
+      <!-- Search Bar (Desktop) -->
+      <div class="search-wrapper me-xl-3 flex-grow-1 flex-xl-grow-0 d-none d-md-block">
+        <form class="position-relative m-0" role="search" onsubmit="event.preventDefault();">
+          <input class="form-control search-input" type="search"
+            placeholder="Search for products, brands and more..." aria-label="Search" />
+          <button
+            class="btn btn-success search-btn rounded-circle position-absolute"
+            type="submit" title="Search">
+            <i class="bi bi-search text-white"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Mobile hamburger toggler -->
+      <button class="navbar-toggler border-0 shadow-none p-1 ms-auto d-xl-none" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarMainContent" aria-controls="navbarMainContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible Content -->
+      <div class="collapse navbar-collapse" id="navbarMainContent">
+        <!-- Mobile Search Input (Visible only in mobile collapsed view) -->
+        <div class="d-md-none my-3">
+          <form class="position-relative m-0" role="search" onsubmit="event.preventDefault();">
+            <input class="form-control search-input" type="search"
+              placeholder="Search for products, brands and more..." aria-label="Search" />
+            <button
+              class="btn btn-success search-btn rounded-circle position-absolute"
+              type="submit">
+              <i class="bi bi-search text-white"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="navbar-nav align-items-xl-center gap-1 gap-xl-2 mb-2 mb-xl-0 ms-xl-2">
+          <li class="nav-item">
+            <a class="nav-link nav-menu-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-menu-link" href="#">Shop</a>
+          </li>
+          <!-- Categories Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-menu-link dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Categories</span>
+              <i class="bi bi-chevron-down custom-chevron"></i>
+            </a>
+            <ul class="dropdown-menu shadow-sm border rounded-3 mt-xl-2 py-2">
+              <li><a class="dropdown-item py-2 d-flex align-items-center gap-2" href="#"><i
+                    class="bi bi-apple text-success"></i> Fresh Fruits & Vegetables</a></li>
+              <li><a class="dropdown-item py-2 d-flex align-items-center gap-2" href="#"><i
+                    class="bi bi-egg-fried text-success"></i> Dairy, Bread & Eggs</a></li>
+              <li><a class="dropdown-item py-2 d-flex align-items-center gap-2" href="#"><i
+                    class="bi bi-cup-hot text-success"></i> Beverages & Drinks</a></li>
+              <li><a class="dropdown-item py-2 d-flex align-items-center gap-2" href="#"><i
+                    class="bi bi-basket text-success"></i> Bakery & Biscuits</a></li>
+              <li><a class="dropdown-item py-2 d-flex align-items-center gap-2" href="#"><i
+                    class="bi bi-cookie text-success"></i> Snacks & Munchies</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item py-2 text-success fw-semibold" href="#">View All Categories &rarr;</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-menu-link" href="#">Brands</a>
+          </li>
+        </ul>
+
+        <!-- Right Action Items -->
+        <div class="d-flex align-items-center gap-2 gap-xl-3 ms-xl-auto pt-3 pt-xl-0 border-top border-top-xl-0 mt-3 mt-xl-0">
+          <!-- Support 24/7 Widget -->
+          <a href="tel:+18001234567" class="support-widget d-flex align-items-center gap-2 me-xl-1">
+            <div class="support-icon-wrapper">
+              <i class="bi bi-headset"></i>
+            </div>
+            <div class="d-flex flex-column justify-content-center">
+              <span class="support-label">Support</span>
+              <span class="support-value">24/7 Help</span>
+            </div>
+          </a>
+
+          <!-- Vertical Divider -->
+          <div class="nav-vertical-divider d-none d-xl-block"></div>
+
+          <!-- Wishlist -->
+          <a href="#wishlist" class="nav-action-icon" title="Wishlist">
+            <i class="bi bi-heart fs-5"></i>
+          </a>
+
+          <!-- Cart -->
+          <a href="#cart" class="nav-action-icon" title="Cart">
+            <i class="bi bi-cart3 fs-5"></i>
+          </a>
+
+          <!-- Sign In Button -->
+          <a href="#signin" class="btn btn-success nav-signin-btn d-flex align-items-center gap-2">
+            <i class="bi bi-person fs-6"></i>
+            <span>Sign In</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <div class="hero-banner p-4 p-md-5 text-white shadow-sm position-relative overflow-hidden">
+      <div class="row align-items-center py-lg-4">
+        <div class="col-lg-7 col-md-9">
+          <span class="badge bg-white text-success fw-bold px-3 py-2 rounded-pill mb-3">
+            <i class="bi bi-stars me-1"></i> Special Offer
+          </span>
+          <h1 class="display-5 fw-bold mb-3 text-white">
+            Fresh Products Delivered to your Door
+          </h1>
+          <p class="lead mb-4 text-white-50">
+            Get 25% off your first order when you order through our FreshCart online grocery store.
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="#shop" class="btn btn-light text-success fw-semibold px-4 py-2 rounded-pill shadow-sm">
+              Shop Now <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+            <a href="#deals" class="btn btn-outline-light fw-semibold px-4 py-2 rounded-pill">
+              View Deals
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
