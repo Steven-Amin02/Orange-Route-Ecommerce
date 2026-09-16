@@ -169,28 +169,75 @@
   </nav>
 
   <main class="container my-4">
-    <div class="hero-banner p-4 p-md-5 text-white shadow-sm position-relative overflow-hidden">
-      <div class="row align-items-center py-lg-4">
-        <div class="col-lg-7 col-md-9">
-          <span class="badge bg-white text-success fw-bold px-3 py-2 rounded-pill mb-3">
-            <i class="bi bi-stars me-1"></i> Special Offer
-          </span>
-          <h1 class="display-5 fw-bold mb-3 text-white">
-            Fresh Products Delivered to your Door
-          </h1>
-          <p class="lead mb-4 text-white-50">
-            Get 25% off your first order when you order through our FreshCart online grocery store.
-          </p>
-          <div class="d-flex flex-wrap gap-2">
-            <a href="#shop" class="btn btn-light text-success fw-semibold px-4 py-2 rounded-pill shadow-sm">
-              Shop Now <i class="bi bi-arrow-right ms-1"></i>
-            </a>
-            <a href="#deals" class="btn btn-outline-light fw-semibold px-4 py-2 rounded-pill">
-              View Deals
-            </a>
+    <div id="heroCarousel" class="carousel slide position-relative" data-bs-ride="carousel">
+      <!-- Carousel Indicators (Dots) -->
+      <div class="hero-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <!-- Carousel Slides -->
+      <div class="carousel-inner rounded-4 overflow-hidden">
+        <div class="carousel-item active" data-bs-interval="5000">
+          <div class="hero-banner">
+            <div class="hero-content ps-4 ps-md-5 ms-md-3">
+              <h1 class="hero-title">
+                Fresh Products Delivered<br>to your Door
+              </h1>
+              <p class="hero-subtitle">
+                Get 20% off your first order
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="#shop" class="btn hero-btn-shop">Shop Now</a>
+                <a href="#deals" class="btn hero-btn-deals">View Deals</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="5000">
+          <div class="hero-banner">
+            <div class="hero-content ps-4 ps-md-5 ms-md-3">
+              <h1 class="hero-title">
+                Organic Greens &amp; Fruits<br>Freshly Harvested
+              </h1>
+              <p class="hero-subtitle">
+                Farm-to-table freshness guaranteed daily
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="#shop" class="btn hero-btn-shop">Shop Now</a>
+                <a href="#deals" class="btn hero-btn-deals">View Deals</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="5000">
+          <div class="hero-banner">
+            <div class="hero-content ps-4 ps-md-5 ms-md-3">
+              <h1 class="hero-title">
+                Quality Groceries at<br>Unbeatable Prices
+              </h1>
+              <p class="hero-subtitle">
+                Free shipping on orders over 500 EGP
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="#shop" class="btn hero-btn-shop">Shop Now</a>
+                <a href="#deals" class="btn hero-btn-deals">View Deals</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- Carousel Controls (Previous / Next Arrows) -->
+      <button class="hero-arrow-btn hero-arrow-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Previous">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+      <button class="hero-arrow-btn hero-arrow-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Next">
+        <i class="bi bi-chevron-right"></i>
+      </button>
     </div>
   </main>
 
