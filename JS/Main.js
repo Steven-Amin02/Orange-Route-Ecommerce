@@ -59,13 +59,15 @@ function createProductCardHTML(product) {
     <div class="product-card" data-id="${id}">
       <!-- Top Image Box with Floating Action Buttons -->
       <div class="product-img-box">
-        <img 
-          src="${imageCover}" 
-          alt="${title}" 
-          class="product-img" 
-          loading="lazy"
-          onerror="this.onerror=null; this.src='https://placehold.co/300x300?text=FreshCart';"
-        />
+        <a href="product-details.html?id=${id}" class="d-block w-100 h-100 text-decoration-none">
+          <img 
+            src="${imageCover}" 
+            alt="${title}" 
+            class="product-img" 
+            loading="lazy"
+            onerror="this.onerror=null; this.src='https://placehold.co/300x300?text=FreshCart';"
+          />
+        </a>
         <div class="product-actions">
           <button class="btn-product-action action-wishlist" title="Add to Wishlist" aria-label="Add to Wishlist" data-id="${id}">
             <i class="fa-regular fa-heart"></i>
@@ -73,9 +75,9 @@ function createProductCardHTML(product) {
           <button class="btn-product-action action-compare" title="Compare" aria-label="Compare" data-id="${id}">
             <i class="fa-solid fa-arrows-rotate"></i>
           </button>
-          <button class="btn-product-action action-view" title="Quick View" aria-label="Quick View" data-id="${id}">
+          <a href="product-details.html?id=${id}" class="btn-product-action action-view text-decoration-none" title="Quick View" aria-label="Quick View">
             <i class="fa-regular fa-eye"></i>
-          </button>
+          </a>
         </div>
       </div>
 
@@ -83,7 +85,7 @@ function createProductCardHTML(product) {
       <div class="product-info">
         <span class="product-category-label">${categoryName}</span>
         <h3 class="product-name">
-          <a href="#product-${id}" title="${title}">${title}</a>
+          <a href="product-details.html?id=${id}" title="${title}">${title}</a>
         </h3>
         <div class="product-rating">
           <div class="rating-stars">

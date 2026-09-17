@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Woman Shawl - FreshCart</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+
+  <!-- ================= TOP UTILITY HEADER ================= -->
+  <div class="top-header d-none d-lg-block">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center top-inner">
+        <!-- Left info -->
+        <div class="d-flex align-items-center gap-4">
+          <span class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-truck text-success"></i>
+            <span>Free Shipping on Orders 500 EGP</span>
+          </span>
+          <span class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-gift text-success"></i>
+            <span>New Arrivals Daily</span>
+          </span>
+        </div>
+
+        <!-- Right info & actions -->
+        <div class="d-flex align-items-center gap-4">
+          <a href="tel:+18001234567" class="top-link d-flex align-items-center gap-2">
+            <i class="fa-solid fa-phone"></i>
+            <span>+1 (800) 123-4567</span>
+          </a>
+          <a href="mailto:support@freshcart.com" class="top-link d-flex align-items-center gap-2">
+            <i class="fa-regular fa-envelope"></i>
+            <span>support@freshcart.com</span>
+          </a>
+          <span class="top-divider"></span>
+          <div class="d-flex align-items-center gap-3">
+            <a href="./Login.html" class="top-link d-flex align-items-center gap-1">
+              <i class="fa-regular fa-user"></i>
+              <span>Sign In</span>
+            </a>
+            <a href="./Signup.html" class="top-link d-flex align-items-center gap-1">
+              <i class="fa-solid fa-user-plus"></i>
+              <span>Sign Up</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN NAVBAR ================= -->
+  <header class="main-header">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between main-header-inner gap-3 gap-lg-4">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center shrink-0 me-0" href="../index.html">
+          <img src="../freshcart-logo.svg" alt="FreshCart" height="32" />
+        </a>
+
+        <!-- Search Bar -->
+        <form class="search-form d-none d-lg-flex position-relative m-0" role="search"
+          onsubmit="event.preventDefault();">
+          <input class="search-input" type="text" placeholder="Search for products, brands and more..."
+            aria-label="Search" />
+          <button class="search-btn" type="submit" title="Search">
+            <i class="fa-solid fa-magnifying-glass" style="font-size: 0.875rem;"></i>
+          </button>
+        </form>
+
+        <!-- Navigation Menu Links -->
+        <nav class="nav-menu d-none d-xl-flex">
+          <a class="nav-menu-link" href="../index.html">Home</a>
+          <a class="nav-menu-link" href="./Shop.html">Shop</a>
+          <div class="dropdown">
+            <a class="nav-menu-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span>Categories</span>
+              <i class="fa-solid fa-chevron-down custom-chevron ms-1"></i>
+            </a>
+            <ul class="dropdown-menu shadow border-0 mt-2 py-2">
+              <li><a class="dropdown-item" href="./Categories.html">All Categories</a></li>
+              <li><a class="dropdown-item" href="./Categories.html">Women's Fashion</a></li>
+              <li><a class="dropdown-item" href="./Categories.html">Men's Fashion</a></li>
+              <li><a class="dropdown-item" href="./Categories.html">Electronics</a></li>
+            </ul>
+          </div>
+          <a class="nav-menu-link" href="./Brands.html">Brands</a>
+        </nav>
+
+        <!-- Right Actions Group -->
+        <div class="d-flex align-items-center gap-1 gap-lg-2">
+          <!-- Support 24/7 -->
+          <a href="tel:+18001234567" class="support-widget d-none d-lg-flex">
+            <div class="support-icon">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div>
+              <div class="support-label">Support</div>
+              <div class="support-value">24/7 Help</div>
+            </div>
+          </a>
+
+          <!-- Wishlist -->
+          <a href="./Whislist.html" class="nav-icon-link" title="Wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </a>
+
+          <!-- Cart with Badge -->
+          <a href="./Cart.html" class="nav-icon-link position-relative" title="Cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-badge">1</span>
+          </a>
+
+          <!-- Sign In Button -->
+          <a href="./Login.html" class="btn-nav-signin d-none d-lg-flex">
+            <i class="fa-regular fa-user" style="font-size: 0.75rem;"></i>
+            <span>Sign In</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggler -->
+          <button class="btn border-0 p-2 d-xl-none text-dark fs-4" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Collapsible Menu -->
+    <div class="collapse d-xl-none border-top bg-white" id="mobileNav">
+      <div class="container py-3">
+        <form class="d-flex mb-3 position-relative" role="search" onsubmit="event.preventDefault();">
+          <input class="form-control rounded-pill pe-5" type="text"
+            placeholder="Search for products, brands and more..." />
+          <button class="btn btn-success rounded-pill position-absolute end-0 top-0 bottom-0 px-3 m-1" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <div class="d-flex flex-column gap-2 mb-3">
+          <a href="../index.html" class="text-dark text-decoration-none py-1 fw-medium">Home</a>
+          <a href="./Shop.html" class="text-dark text-decoration-none py-1 fw-medium">Shop</a>
+          <a href="./Categories.html" class="text-dark text-decoration-none py-1 fw-medium">Categories</a>
+          <a href="./Brands.html" class="text-dark text-decoration-none py-1 fw-medium">Brands</a>
+        </div>
+        <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+          <a href="tel:+18001234567" class="text-dark text-decoration-none small d-flex align-items-center gap-2">
+            <i class="fa-solid fa-phone text-success"></i> +1 (800) 123-4567
+          </a>
+          <a href="./Login.html" class="btn btn-sm btn-success rounded-pill px-3">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= BREADCRUMBS ================= -->
+  <div class="breadcrumb-bar py-3 bg-white border-bottom">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 align-items-center" id="breadcrumb-list">
+          <li class="breadcrumb-item">
+            <a href="../index.html" class="text-decoration-none d-flex align-items-center gap-1 text-muted">
+              <i class="fa-solid fa-house text-secondary"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#category" class="text-decoration-none text-muted" id="breadcrumb-cat">Women's Fashion</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#subcat" class="text-decoration-none text-muted" id="breadcrumb-subcat">Women's Clothing</a>
+          </li>
+          <li class="breadcrumb-item active text-dark fw-medium" aria-current="page" id="breadcrumb-title">
+            Woman Shawl
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ================= PRODUCT DETAILS MAIN SECTION ================= -->
+  <section class="product-details-page py-5 bg-white">
+    <div class="container">
+      <div class="row g-4 g-lg-5 align-items-start">
+
+        <!-- Left: Product Image Gallery -->
+        <div class="col-lg-5">
+          <div class="product-gallery-wrapper">
+            <!-- Big Main Image Box -->
+            <div class="gallery-main-box">
+              <img id="main-product-image"
+                src="https://ecommerce.routemisr.com/Route-Academy-products/1680403397402-cover.jpeg" alt="Woman Shawl"
+                class="gallery-main-img" />
+            </div>
+
+            <!-- Horizontal Thumbnails Strip -->
+            <div class="gallery-thumbnails" id="thumbnails-container">
+              <div class="thumb-box active"
+                onclick="switchMainImage(this, 'https://ecommerce.routemisr.com/Route-Academy-products/1680403397482-1.jpeg')">
+                <img src="https://ecommerce.routemisr.com/Route-Academy-products/1680403397482-1.jpeg"
+                  alt="Thumbnail 1" />
+              </div>
+              <div class="thumb-box"
+                onclick="switchMainImage(this, 'https://ecommerce.routemisr.com/Route-Academy-products/1680403397482-2.jpeg')">
+                <img src="https://ecommerce.routemisr.com/Route-Academy-products/1680403397482-2.jpeg"
+                  alt="Thumbnail 2" />
+              </div>
+              <div class="thumb-box"
+                onclick="switchMainImage(this, 'https://ecommerce.routemisr.com/Route-Academy-products/1680403397483-3.jpeg')">
+                <img src="https://ecommerce.routemisr.com/Route-Academy-products/1680403397483-3.jpeg"
+                  alt="Thumbnail 3" />
+              </div>
+              <div class="thumb-box"
+                onclick="switchMainImage(this, 'https://ecommerce.routemisr.com/Route-Academy-products/1680403397485-4.jpeg')">
+                <img src="https://ecommerce.routemisr.com/Route-Academy-products/1680403397485-4.jpeg"
+                  alt="Thumbnail 4" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Product Information & Purchase Options -->
+        <div class="col-lg-7">
+          <div class="product-detail-content">
+
+            <!-- Badges Row -->
+            <div class="detail-badge-group mb-3">
+              <span class="badge-cat-pill" id="product-category-badge">Women's Fashion</span>
+              <span class="badge-brand-pill" id="product-brand-badge">DeFacto</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="product-detail-title" id="product-title">Woman Shawl</h1>
+
+            <!-- Rating Row -->
+            <div class="detail-rating-row mb-3">
+              <div class="detail-stars text-warning" id="product-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <span class="detail-rating-score" id="product-rating-text">4 (41 reviews)</span>
+            </div>
+
+            <!-- Price -->
+            <div class="product-detail-price mb-3" id="product-price">149 EGP</div>
+
+            <!-- Stock Status -->
+            <div class="stock-status-pill mb-4">
+              <span class="stock-bullet">●</span>
+              <span id="product-stock-status">In Stock</span>
+            </div>
+
+            <!-- Description -->
+            <p class="product-detail-desc mb-4" id="product-desc">
+              Material Polyester Blend Colour Name Multicolour Department Women
+            </p>
+
+            <!-- Quantity Selector Row -->
+            <div class="quantity-section mb-4">
+              <label class="quantity-label">Quantity</label>
+              <div class="d-flex align-items-center gap-3">
+                <div class="quantity-stepper">
+                  <button type="button" class="stepper-btn" onclick="decrementQuantity()"
+                    aria-label="Decrease quantity">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <input type="text" id="product-qty-input" class="stepper-val" value="1" readonly />
+                  <button type="button" class="stepper-btn" onclick="incrementQuantity()"
+                    aria-label="Increase quantity">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+                <span class="stock-available-text" id="product-available-stock">220 available</span>
+              </div>
+            </div>
+
+            <!-- Total Price Bar -->
+            <div class="total-price-bar mb-4">
+              <span class="total-price-label">Total Price:</span>
+              <span class="total-price-value" id="product-total-price">149.00 EGP</span>
+            </div>
+
+            <!-- Add to Cart & Wishlist Actions -->
+            <div class="product-actions-bar d-flex gap-3 mb-4">
+              <button type="button" class="btn-detail-add-cart" id="btn-add-cart" onclick="addToCartDetailed()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Add to Cart</span>
+              </button>
+              <button type="button" class="btn-detail-wishlist" id="btn-wishlist" onclick="toggleWishlistDetailed()"
+                title="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+
+            <!-- Value Propositions / Perks -->
+            <div class="product-perks-box">
+              <div class="perk-item">
+                <i class="fa-solid fa-truck-fast text-emerald-600"></i>
+                <span>Free delivery for orders above 500 EGP</span>
+              </div>
+              <div class="perk-item">
+                <i class="fa-solid fa-shield-halved text-emerald-600"></i>
+                <span>100% genuine & certified quality</span>
+              </div>
+              <div class="perk-item">
+                <i class="fa-solid fa-arrow-rotate-left text-emerald-600"></i>
+                <span>14-day hassle-free returns</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES STRIP ================= -->
+  <div class="features-strip">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 py-4">
+
+        <!-- Feature 1 -->
+        <div class="col">
+          <div class="strip-feature-item">
+            <div class="strip-icon-box">
+              <i class="fa-solid fa-truck"></i>
+            </div>
+            <div>
+              <h4 class="strip-title">Free Shipping</h4>
+              <p class="strip-sub">On orders over 500 EGP</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="col">
+          <div class="strip-feature-item">
+            <div class="strip-icon-box">
+              <i class="fa-solid fa-rotate-left"></i>
+            </div>
+            <div>
+              <h4 class="strip-title">Easy Returns</h4>
+              <p class="strip-sub">14-day return policy</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="col">
+          <div class="strip-feature-item">
+            <div class="strip-icon-box">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+              <h4 class="strip-title">Secure Payment</h4>
+              <p class="strip-sub">100% secure checkout</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="col">
+          <div class="strip-feature-item">
+            <div class="strip-icon-box">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div>
+              <h4 class="strip-title">24/7 Support</h4>
+              <p class="strip-sub">Contact us anytime</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer-wrapper">
+    <div class="container footer-content-section">
+      <div class="row g-4 justify-content-between">
+
+        <!-- Column 1: Brand Info -->
+        <div class="col-lg-4 col-md-6 pe-lg-5">
+          <div class="footer-logo mb-3">
+            <div class="footer-brand-badge">
+              <img src="../freshcart-logo.svg" alt="FreshCart" height="28" />
+            </div>
+          </div>
+          <p class="footer-desc mb-4">
+            FreshCart is your one-stop destination for quality products. From fashion to electronics, we bring you the
+            best brands at competitive prices with a seamless shopping experience.
+          </p>
+          <div class="footer-contacts">
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>+1 (800) 123-4567</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa-regular fa-envelope"></i>
+              <span>support@freshcart.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>123 Commerce Street, New York, NY 10001</span>
+            </div>
+          </div>
+          <div class="footer-social-links mt-4">
+            <a href="#facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#twitter" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#youtube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Categories -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="footer-heading">Shop</h3>
+          <ul class="footer-links">
+            <li><a href="./Shop.html">All Products</a></li>
+            <li><a href="./Categories.html">Categories</a></li>
+            <li><a href="./Brands.html">Brands</a></li>
+            <li><a href="../index.html#electronics">Electronics</a></li>
+            <li><a href="../index.html#mens-fashion">Men's Fashion</a></li>
+            <li><a href="../index.html#womens-fashion">Women's Fashion</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Account -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="footer-heading">Account</h3>
+          <ul class="footer-links">
+            <li><a href="./Login.html">My Account</a></li>
+            <li><a href="#orders">Order History</a></li>
+            <li><a href="./Whislist.html">Wishlist</a></li>
+            <li><a href="./Cart.html">Shopping Cart</a></li>
+            <li><a href="./Login.html">Sign In</a></li>
+            <li><a href="./Signup.html">Create Account</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Support -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="footer-heading">Support</h3>
+          <ul class="footer-links">
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#help">Help Center</a></li>
+            <li><a href="#shipping">Shipping Info</a></li>
+            <li><a href="#returns">Returns &amp; Refunds</a></li>
+            <li><a href="#track">Track Order</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 5: Legal -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h3 class="footer-heading">Legal</h3>
+          <ul class="footer-links">
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+            <li><a href="#cookies">Cookie Policy</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 py-4">
+          <p class="footer-copyright mb-0">
+            &copy; 2026 FreshCart. All rights reserved.
+          </p>
+          <div class="footer-payment-methods">
+            <div class="payment-badge">
+              <i class="fa-solid fa-credit-card"></i>
+              <span>Visa</span>
+            </div>
+            <div class="payment-badge">
+              <i class="fa-solid fa-credit-card"></i>
+              <span>Mastercard</span>
+            </div>
+            <div class="payment-badge">
+              <i class="fa-solid fa-credit-card"></i>
+              <span>PayPal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../JS/product-details.js"></script>
+</body>
+
+</html>
