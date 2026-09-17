@@ -1054,3 +1054,315 @@ textarea,
   background-color: #15803d;
   transform: scale(1.08);
 }
+
+/* ================= NEWSLETTER & MOBILE APP SECTION ================= */
+.newsletter-app-section {
+  padding: 3rem 0;
+  background-color: #ffffff;
+}
+
+.newsletter-app-card {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0fdf4 100%);
+  border: 1px solid #dcfce7;
+  border-radius: 2rem;
+  padding: 3rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .newsletter-app-card {
+    padding: 2rem 1.5rem;
+    border-radius: 1.5rem;
+  }
+}
+
+/* Left: Newsletter */
+.newsletter-badge-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 1.25rem;
+}
+
+.newsletter-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background-color: #059669;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+  flex-shrink: 0;
+}
+
+.newsletter-badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #059669;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+.badge-sub {
+  font-size: 0.8125rem;
+  color: #6b7280;
+  line-height: 1.2;
+}
+
+.newsletter-title {
+  font-size: clamp(1.75rem, 3.2vw, 2.375rem);
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.newsletter-title .text-emerald {
+  color: #059669;
+}
+
+.newsletter-subtitle {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.newsletter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.feature-pill {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+}
+
+.feature-pill i {
+  color: #059669;
+  font-size: 0.875rem;
+}
+
+.newsletter-form {
+  margin-bottom: 0.875rem;
+}
+
+.newsletter-input-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 520px;
+}
+
+.newsletter-input {
+  flex: 1;
+  min-width: 240px;
+  height: 52px;
+  padding: 0 1.25rem;
+  border-radius: 0.75rem;
+  border: 1.5px solid #d1d5db;
+  background-color: #ffffff;
+  color: #1f2937;
+  font-size: 0.9375rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.newsletter-input:focus {
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15);
+}
+
+.btn-newsletter-submit {
+  height: 52px;
+  padding: 0 1.75rem;
+  background-color: #059669;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 8px rgba(5, 150, 105, 0.2);
+}
+
+.btn-newsletter-submit:hover {
+  background-color: #047857;
+  transform: translateX(2px);
+  box-shadow: 0 6px 12px rgba(5, 150, 105, 0.25);
+}
+
+.newsletter-disclaimer {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.disclaimer-icon {
+  color: #f59e0b;
+  font-size: 0.75rem;
+}
+
+/* Right: Dark App Download Card */
+.app-download-card {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.22) 0%, rgba(16, 185, 129, 0) 65%), #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  padding: 2.25rem 2rem;
+  color: #ffffff;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+}
+
+.app-card-glow {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.3) 0%, rgba(16, 185, 129, 0) 70%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.app-card-content {
+  position: relative;
+  z-index: 10;
+}
+
+.app-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  color: #34d399;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+.app-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.app-card-subtitle {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1.5rem;
+  line-height: 1.45;
+}
+
+.app-buttons-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-app-store {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-app-store:hover {
+  background-color: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.store-icon {
+  font-size: 1.625rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.store-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.store-sub {
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.2;
+}
+
+.store-main {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.app-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.app-stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: #fbbf24;
+  font-size: 0.75rem;
+}
+
+.app-downloads-count {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
