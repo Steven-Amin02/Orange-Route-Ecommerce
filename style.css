@@ -1865,36 +1865,84 @@ textarea,
 
 .btn-detail-add-cart {
   flex: 1;
-  height: 52px;
-  background-color: #059669;
+  height: 48px;
+  background-color: #16a34a;
   color: #ffffff;
   border: none;
-  border-radius: 0.75rem;
+  border-radius: 0.625rem;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.95rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 6px -1px rgba(5, 150, 105, 0.2);
+  box-shadow: 0 4px 6px -1px rgba(22, 163, 74, 0.2);
 }
 
 .btn-detail-add-cart:hover {
-  background-color: #047857;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px -2px rgba(5, 150, 105, 0.3);
+  background-color: #15803d;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px -2px rgba(22, 163, 74, 0.3);
 }
 
-.btn-detail-wishlist {
-  width: 52px;
-  height: 52px;
-  border: 1.5px solid #d1d5db;
-  border-radius: 0.75rem;
+.btn-detail-buy-now {
+  flex: 1;
+  height: 48px;
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.625rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.2);
+}
+
+.btn-detail-buy-now:hover {
+  background-color: #1e293b;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px -2px rgba(15, 23, 42, 0.3);
+}
+
+.btn-detail-wishlist-wide {
+  flex: 1;
+  height: 46px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 0.625rem;
   background: #ffffff;
-  color: #6b7280;
-  font-size: 1.25rem;
+  color: #374151;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-detail-wishlist-wide:hover {
+  color: #ef4444;
+  border-color: #fca5a5;
+  background-color: #fef2f2;
+}
+
+.btn-detail-share {
+  width: 46px;
+  height: 46px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 0.625rem;
+  background: #ffffff;
+  color: #4b5563;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1902,30 +1950,297 @@ textarea,
   transition: all 0.2s ease;
 }
 
-.btn-detail-wishlist:hover {
-  color: #ef4444;
-  border-color: #fca5a5;
-  background-color: #fef2f2;
-  transform: translateY(-2px);
+.btn-detail-share:hover {
+  color: #16a34a;
+  border-color: #86efac;
+  background-color: #f0fdf4;
 }
 
-.product-perks-box {
-  border-top: 1px solid #f1f5f9;
-  padding-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
+/* 3 Horizontal Trust Badges */
+.product-trust-badges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.75rem;
+  padding-top: 1.25rem;
+  margin-top: 1.25rem;
+  border-top: 1px solid #f1f5f9;
 }
 
-.perk-item {
+.trust-badge-item {
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  font-size: 0.875rem;
-  color: #4b5563;
 }
 
-.perk-item i {
-  color: #059669;
-  font-size: 1rem;
+.trust-badge-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #dcfce7;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.trust-badge-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.trust-badge-sub {
+  font-size: 0.75rem;
+  color: #6b7280;
+  line-height: 1.2;
+  margin-top: 0.1rem;
+}
+
+/* Tabs Section */
+.product-tabs-wrapper {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.product-tabs-nav {
+  display: flex;
+  gap: 1.5rem;
+  border-bottom: 2px solid #f3f4f6;
+  margin-bottom: 1.75rem;
+}
+
+.tab-nav-btn {
+  background: none;
+  border: none;
+  padding: 0.75rem 0.25rem 0.875rem 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6b7280;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.tab-nav-btn:hover {
+  color: #111827;
+}
+
+.tab-nav-btn.active {
+  color: #16a34a;
+}
+
+.tab-nav-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #16a34a;
+  border-radius: 2px;
+}
+
+.spec-card {
+  background-color: #f9fafb;
+  border: 1px solid #f3f4f6;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  height: 100%;
+}
+
+.spec-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.875rem;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.spec-table td {
+  padding: 0.35rem 0;
+  font-size: 0.875rem;
+  vertical-align: top;
+}
+
+.spec-label {
+  color: #6b7280;
+  width: 45%;
+}
+
+.spec-val {
+  color: #111827;
+  font-weight: 500;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.feature-list li i {
+  color: #16a34a;
+}
+
+/* Related Products Section Header */
+.related-products-section {
+  padding: 3rem 0;
+  background-color: #ffffff;
+}
+
+.section-title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.section-title-left {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.title-accent-bar {
+  width: 4px;
+  height: 24px;
+  background-color: #16a34a;
+  border-radius: 9999px;
+}
+
+.section-heading-text {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.section-heading-text span {
+  color: #16a34a;
+}
+
+.slider-arrow-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #4b5563;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+}
+
+.slider-arrow-btn:hover {
+  background-color: #16a34a;
+  color: #ffffff;
+  border-color: #16a34a;
+}
+
+/* Discount Badge & Price Struck */
+.product-badge-discount {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  z-index: 5;
+  line-height: 1;
+}
+
+.product-price-box {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.product-old-price {
+  font-size: 0.8125rem;
+  color: #9ca3af;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+/* Header Sign In Button & Support Widget */
+.btn-header-signin {
+  background-color: #16a34a;
+  color: #ffffff !important;
+  border-radius: 9999px;
+  padding: 0.45rem 1.125rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(22, 163, 74, 0.2);
+}
+
+.btn-header-signin:hover {
+  background-color: #15803d;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+.support-widget {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  text-decoration: none;
+}
+
+.support-icon-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #dcfce7;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.support-text-label {
+  font-size: 0.6875rem;
+  color: #6b7280;
+  line-height: 1.1;
+}
+
+.support-text-val {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
 }
