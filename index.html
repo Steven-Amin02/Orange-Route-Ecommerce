@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FreshCart</title>
+  <meta name="description" content="Shop fresh groceries, organic produce, dairy, and everyday essentials online at FreshCart. Enjoy fast delivery, daily deals, and 24/7 customer support." />
+  <title>FreshCart - Fresh Groceries &amp; Daily Essentials</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css" />
@@ -12,7 +13,10 @@
 </head>
 
 <body>
-  <div class="top-header d-none d-lg-block">
+  <!-- Skip to Main Content Link (WCAG 2.4.1) -->
+  <a href="#main-content" class="visually-hidden-focusable btn btn-success position-absolute start-0 top-0 m-2 z-3">Skip to main content</a>
+
+  <div class="top-header d-none d-lg-block" role="region" aria-label="Announcements and customer service">
     <div class="container">
       <div class="d-flex justify-content-between align-items-center top-inner">
         <div class="d-flex align-items-center gap-4 text-secondary">
@@ -55,26 +59,27 @@
   </div>
 
   <!-- Main Navbar Header: h-[72px] -->
-  <header class="main-header">
+  <header class="main-header" role="banner">
     <div class="container">
       <div class="d-flex align-items-center justify-content-between main-header-inner gap-3 gap-lg-4">
         <!-- Logo -->
-        <a class="navbar-brand d-flex align-items-center shrink-0 me-0" href="index.html">
-          <img src="./freshcart-logo.svg" alt="FreshCart" height="32" />
+        <a class="navbar-brand d-flex align-items-center shrink-0 me-0" href="index.html" aria-label="FreshCart Home">
+          <img src="./freshcart-logo.svg" alt="FreshCart Logo" height="32" />
         </a>
 
         <!-- Search Bar -->
-        <form class="search-form d-none d-lg-flex position-relative m-0" role="search"
+        <form class="search-form d-none d-lg-flex position-relative m-0" role="search" aria-label="Site search"
           onsubmit="event.preventDefault();">
-          <input class="search-input" type="text" placeholder="Search for products, brands and more..."
-            aria-label="Search" />
-          <button class="search-btn" type="submit" title="Search">
-            <i class="fa-solid fa-magnifying-glass" style="font-size: 0.875rem;"></i>
+          <label for="header-search-input" class="visually-hidden">Search for products, brands and more</label>
+          <input id="header-search-input" class="search-input" type="search" placeholder="Search for products, brands and more..."
+            aria-label="Search for products, brands and more" />
+          <button class="search-btn" type="submit" title="Search" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass" style="font-size: 0.875rem;" aria-hidden="true"></i>
           </button>
         </form>
 
         <!-- Navigation Menu Links -->
-        <nav class="nav-menu d-none d-xl-flex">
+        <nav class="nav-menu d-none d-xl-flex" aria-label="Primary Navigation">
           <a class="nav-menu-link" href="#">Home</a>
           <a class="nav-menu-link" href="#">Shop</a>
           <div class="dropdown">
@@ -109,38 +114,39 @@
           </a>
 
           <!-- Wishlist -->
-          <a href="#wishlist" class="nav-icon-link" title="Wishlist">
-            <i class="fa-regular fa-heart"></i>
+          <a href="#wishlist" class="nav-icon-link" title="Wishlist" aria-label="View Wishlist">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
           </a>
 
           <!-- Cart with Badge -->
-          <a href="#cart" class="nav-icon-link position-relative" title="Cart">
-            <i class="fa-solid fa-cart-shopping"></i>
+          <a href="./Pages/Cart.html" class="nav-icon-link position-relative" title="Cart" aria-label="View Shopping Cart">
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
             <span class="cart-badge">1</span>
           </a>
 
           <!-- Sign In Button -->
-          <a href="#signin" class="btn-nav-signin d-none d-lg-flex">
-            <i class="fa-regular fa-user" style="font-size: 0.75rem;"></i>
+          <a href="#signin" class="btn-nav-signin d-none d-lg-flex" aria-label="Sign In">
+            <i class="fa-regular fa-user" style="font-size: 0.75rem;" aria-hidden="true"></i>
             <span>Sign In</span>
           </a>
 
           <!-- Mobile Hamburger Toggler -->
           <button class="btn border-0 p-2 d-xl-none text-dark fs-4" type="button" data-bs-toggle="collapse"
-            data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars"></i>
+            data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle mobile navigation menu">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
           </button>
         </div>
       </div>
     </div>
 
     <!-- Mobile Collapsible Menu -->
-    <div class="collapse d-xl-none border-top bg-white" id="mobileNav">
+    <nav class="collapse d-xl-none border-top bg-white" id="mobileNav" aria-label="Mobile Navigation">
       <div class="container py-3">
-        <form class="mb-3 position-relative" role="search" onsubmit="event.preventDefault();">
-          <input class="search-input" type="text" placeholder="Search products..." aria-label="Search" />
-          <button class="search-btn" type="submit">
-            <i class="fa-solid fa-magnifying-glass" style="font-size: 0.875rem;"></i>
+        <form class="mb-3 position-relative" role="search" aria-label="Mobile site search" onsubmit="event.preventDefault();">
+          <label for="mobile-search-input" class="visually-hidden">Search products</label>
+          <input id="mobile-search-input" class="search-input" type="search" placeholder="Search products..." aria-label="Search products" />
+          <button class="search-btn" type="submit" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass" style="font-size: 0.875rem;" aria-hidden="true"></i>
           </button>
         </form>
         <div class="d-flex flex-column gap-2 mb-3">
@@ -154,12 +160,15 @@
           <a href="#signup" class="btn btn-outline-success flex-grow-1 rounded-pill py-2">Sign Up</a>
         </div>
       </div>
-    </div>
+    </nav>
   </header>
 
-  <!-- Full-Width Hero Slider Section (Edge-to-Edge) -->
-  <section class="hero-slider-section">
-    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
+  <!-- ================= MAIN CONTENT ================= -->
+  <main id="main-content">
+
+    <!-- Full-Width Hero Slider Section (Edge-to-Edge) -->
+    <section class="hero-slider-section" aria-label="Promotional Carousel">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="7000" aria-label="Hero promotions carousel">
       <!-- Carousel Indicators (Dots) -->
       <div class="slider-pagination">
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
@@ -176,7 +185,7 @@
             <div class="hero-overlay">
               <div class="container h-100 d-flex flex-column justify-content-center">
                 <div class="hero-content">
-                  <h2 class="hero-title">Fresh Products Delivered to your Door</h2>
+                  <h1 class="hero-title">Fresh Products Delivered to your Door</h1>
                   <p class="hero-subtitle">Get 20% off your first order</p>
                   <div class="hero-btn-group">
                     <a class="btn-hero-shop" href="#products">Shop Now</a>
@@ -237,7 +246,7 @@
   </section>
 
   <!-- Features Section (4 Cards) -->
-  <section class="features-section">
+  <section class="features-section" aria-label="Store Advantages">
     <div class="container">
       <div class="row g-3 g-lg-4 row-cols-1 row-cols-md-2 row-cols-lg-4">
         <!-- Feature 1: Free Shipping -->
@@ -296,7 +305,7 @@
   </section>
 
   <!-- Shop By Category Section -->
-  <section id="categories" class="category-section">
+  <section id="categories" class="category-section" aria-label="Shop By Category">
     <div class="container">
       <!-- Section Header -->
       <div class="category-header">
@@ -396,7 +405,8 @@
   </section>
 
   <!-- Promotional Banners Section (Deals & New Arrivals) -->
-  <section class="promo-banners-section">
+  <!-- Promotional Banners Section -->
+  <section class="promo-banners-section" aria-label="Special Offers and New Arrivals">
     <div class="container">
       <div class="row g-4 row-cols-1 row-cols-md-2">
         <!-- Banner 1: Deal of the Day -->
@@ -451,7 +461,7 @@
   </section>
 
   <!-- ================= FEATURED PRODUCTS SECTION ================= -->
-  <section class="featured-products-section py-4" id="featured-products">
+  <section class="featured-products-section py-4" id="featured-products" aria-label="Featured Products">
     <div class="container">
       <!-- Section Title -->
       <div class="featured-products-header mb-4">
@@ -664,7 +674,7 @@
   </section>
 
   <!-- ================= NEWSLETTER & MOBILE APP SECTION ================= -->
-  <section class="newsletter-app-section py-5" id="newsletter">
+  <section class="newsletter-app-section py-5" id="newsletter" aria-label="Newsletter Subscription and Mobile App">
     <div class="container">
       <div class="newsletter-app-card">
         <div class="row align-items-center g-4">
@@ -709,12 +719,13 @@
             </div>
 
             <!-- Subscription Form -->
-            <form class="newsletter-form" onsubmit="event.preventDefault();">
+            <form class="newsletter-form" aria-label="Subscribe to newsletter" onsubmit="event.preventDefault();">
               <div class="newsletter-input-group">
-                <input type="email" placeholder="you@example.com" class="newsletter-input" required />
-                <button type="submit" class="btn-newsletter-submit">
+                <label for="newsletter-email-input" class="visually-hidden">Email address for newsletter</label>
+                <input id="newsletter-email-input" type="email" placeholder="you@example.com" class="newsletter-input" required aria-label="Email address for newsletter" />
+                <button type="submit" class="btn-newsletter-submit" aria-label="Subscribe to newsletter">
                   <span>Subscribe</span>
-                  <i class="fa-solid fa-arrow-right"></i>
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 </button>
               </div>
             </form>
@@ -787,7 +798,7 @@
   </section>
 
   <!-- ================= FEATURES STRIP ================= -->
-  <div class="features-strip">
+  <section class="features-strip" aria-label="Customer Guarantees">
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 py-4">
 
@@ -845,10 +856,12 @@
 
       </div>
     </div>
-  </div>
+  </section>
+
+  </main>
 
   <!-- ================= MAIN FOOTER ================= -->
-  <footer id="footer" class="main-footer">
+  <footer id="footer" class="main-footer" role="contentinfo">
     <div class="container">
       <div class="row g-4 py-5">
 

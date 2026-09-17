@@ -8,9 +8,9 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
@@ -43,11 +43,11 @@
           </a>
           <span class="top-divider"></span>
           <div class="d-flex align-items-center gap-3">
-            <a href="Login.html" class="top-link d-flex align-items-center gap-1">
+            <a href="./Pages/Login.html" class="top-link d-flex align-items-center gap-1">
               <i class="fa-regular fa-user" style="font-size: 0.75rem;"></i>
               <span>Sign In</span>
             </a>
-            <a href="Signup.html" class="top-link d-flex align-items-center gap-1">
+            <a href="./Pages/Signup.html" class="top-link d-flex align-items-center gap-1">
               <i class="fa-solid fa-user-plus" style="font-size: 0.75rem;"></i>
               <span>Sign Up</span>
             </a>
@@ -62,8 +62,8 @@
     <div class="container">
       <div class="d-flex align-items-center justify-content-between main-header-inner gap-3 gap-lg-4">
         <!-- Logo -->
-        <a class="navbar-brand d-flex align-items-center shrink-0 me-0" href="../index.html">
-          <img src="../freshcart-logo.svg" alt="FreshCart" height="32" />
+        <a class="navbar-brand d-flex align-items-center shrink-0 me-0" href="index.html">
+          <img src="./freshcart-logo.svg" alt="FreshCart" height="32" />
         </a>
 
         <!-- Search Bar -->
@@ -78,8 +78,8 @@
 
         <!-- Navigation Menu Links -->
         <nav class="nav-menu d-none d-xl-flex">
-          <a class="nav-menu-link" href="../index.html">Home</a>
-          <a class="nav-menu-link" href="Shop.html">Shop</a>
+          <a class="nav-menu-link" href="index.html">Home</a>
+          <a class="nav-menu-link" href="./Pages/Shop.html">Shop</a>
           <div class="dropdown">
             <a class="nav-menu-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
@@ -87,13 +87,13 @@
               <i class="fa-solid fa-chevron-down custom-chevron ms-1"></i>
             </a>
             <ul class="dropdown-menu shadow border-0 mt-2 py-2">
-              <li><a class="dropdown-item" href="Categories.html">All Categories</a></li>
-              <li><a class="dropdown-item" href="Categories.html">Women's Fashion</a></li>
-              <li><a class="dropdown-item" href="Categories.html">Men's Fashion</a></li>
-              <li><a class="dropdown-item" href="Categories.html">Electronics</a></li>
+              <li><a class="dropdown-item" href="./Pages/Categories.html">All Categories</a></li>
+              <li><a class="dropdown-item" href="./Pages/Categories.html">Women's Fashion</a></li>
+              <li><a class="dropdown-item" href="./Pages/Categories.html">Men's Fashion</a></li>
+              <li><a class="dropdown-item" href="./Pages/Categories.html">Electronics</a></li>
             </ul>
           </div>
-          <a class="nav-menu-link" href="Brands.html">Brands</a>
+          <a class="nav-menu-link" href="./Pages/Brands.html">Brands</a>
         </nav>
 
         <!-- Right Actions Group -->
@@ -110,18 +110,18 @@
           </a>
 
           <!-- Wishlist -->
-          <a href="Whislist.html" class="nav-icon-link" title="Wishlist">
+          <a href="./Pages/Whislist.html" class="nav-icon-link" title="Wishlist">
             <i class="fa-regular fa-heart"></i>
           </a>
 
           <!-- Cart with Badge -->
-          <a href="Cart.html" class="nav-icon-link position-relative" title="Cart">
+          <a href="cart.html" class="nav-icon-link position-relative" title="Cart">
             <i class="fa-solid fa-cart-shopping"></i>
             <span class="cart-badge">2</span>
           </a>
 
           <!-- Sign In Button -->
-          <a href="Login.html" class="btn-header-signin d-none d-lg-inline-flex">
+          <a href="./Pages/Login.html" class="btn-header-signin d-none d-lg-inline-flex">
             <i class="fa-solid fa-arrow-right-to-bracket"></i>
             <span>Sign In</span>
           </a>
@@ -145,16 +145,16 @@
           </button>
         </form>
         <div class="d-flex flex-column gap-2 mb-3">
-          <a href="../index.html" class="text-dark text-decoration-none py-1 fw-medium">Home</a>
-          <a href="Shop.html" class="text-dark text-decoration-none py-1 fw-medium">Shop</a>
-          <a href="Categories.html" class="text-dark text-decoration-none py-1 fw-medium">Categories</a>
-          <a href="Brands.html" class="text-dark text-decoration-none py-1 fw-medium">Brands</a>
+          <a href="index.html" class="text-dark text-decoration-none py-1 fw-medium">Home</a>
+          <a href="./Pages/Shop.html" class="text-dark text-decoration-none py-1 fw-medium">Shop</a>
+          <a href="./Pages/Categories.html" class="text-dark text-decoration-none py-1 fw-medium">Categories</a>
+          <a href="./Pages/Brands.html" class="text-dark text-decoration-none py-1 fw-medium">Brands</a>
         </div>
         <div class="d-flex align-items-center justify-content-between pt-2 border-top">
           <a href="tel:+18001234567" class="text-dark text-decoration-none small d-flex align-items-center gap-2">
             <i class="fa-solid fa-phone text-success"></i> +1 (800) 123-4567
           </a>
-          <a href="Login.html" class="btn btn-sm btn-success rounded-pill px-3">Sign In</a>
+          <a href="./Pages/Login.html" class="btn btn-sm btn-success rounded-pill px-3">Sign In</a>
         </div>
       </div>
     </div>
@@ -165,7 +165,7 @@
     <div class="container">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb cart-breadcrumb mb-0 align-items-center">
-          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
         </ol>
       </nav>
@@ -196,11 +196,11 @@
             <!-- Item 1 -->
             <div class="cart-item-card" id="cart-item-6428ebc6dc1175abc65ca0b9">
               <div class="cart-item-left">
-                <a href="ProductDetails.html?id=6428ebc6dc1175abc65ca0b9" class="cart-item-img-box text-decoration-none">
+                <a href="product-details.html?id=6428ebc6dc1175abc65ca0b9" class="cart-item-img-box text-decoration-none">
                   <img src="https://ecommerce.routemisr.com/Route-Academy-products/1680403397402-cover.jpeg" alt="Woman Shawl" class="cart-item-img" />
                 </a>
                 <div class="cart-item-info">
-                  <a href="ProductDetails.html?id=6428ebc6dc1175abc65ca0b9" class="cart-item-title">Woman Shawl</a>
+                  <a href="product-details.html?id=6428ebc6dc1175abc65ca0b9" class="cart-item-title">Woman Shawl</a>
                   <span class="cart-item-category">Women's Fashion</span>
                   <div class="cart-item-unit-price">149 EGP</div>
                   <div class="cart-stepper">
@@ -228,11 +228,11 @@
             <!-- Item 2 -->
             <div class="cart-item-card" id="cart-item-6428eb43dc1175abc65ca0b3">
               <div class="cart-item-left">
-                <a href="ProductDetails.html?id=6428eb43dc1175abc65ca0b3" class="cart-item-img-box text-decoration-none">
+                <a href="product-details.html?id=6428eb43dc1175abc65ca0b3" class="cart-item-img-box text-decoration-none">
                   <img src="https://ecommerce.routemisr.com/Route-Academy-products/1680403266739-cover.jpeg" alt="Woman Bordeaux Long Sleeve Blouse BORDEAUX" class="cart-item-img" />
                 </a>
                 <div class="cart-item-info">
-                  <a href="ProductDetails.html?id=6428eb43dc1175abc65ca0b3" class="cart-item-title">Woman Bordeaux Long Sleeve Blouse BORDEAUX</a>
+                  <a href="product-details.html?id=6428eb43dc1175abc65ca0b3" class="cart-item-title">Woman Bordeaux Long Sleeve Blouse BORDEAUX</a>
                   <span class="cart-item-category">Women's Fashion</span>
                   <div class="cart-item-unit-price">349 EGP</div>
                   <div class="cart-stepper">
@@ -260,7 +260,7 @@
 
           <!-- Bottom Actions -->
           <div class="cart-bottom-actions" id="cart-bottom-actions-bar">
-            <a href="Shop.html" class="cart-continue-link">
+            <a href="./Pages/Shop.html" class="cart-continue-link">
               <i class="fa-solid fa-arrow-left"></i>
               <span>Continue Shopping</span>
             </a>
@@ -291,12 +291,12 @@
                 <span class="summary-total-label">Estimated Total</span>
                 <span class="summary-total-value" id="summary-estimated-total">498 EGP</span>
               </div>
-              <a href="Login.html" class="btn-checkout-login">
+              <a href="./Pages/Login.html" class="btn-checkout-login">
                 <i class="fa-solid fa-user"></i>
                 <span>Login to Checkout</span>
               </a>
               <p class="text-center text-secondary small mt-3 mb-4">
-                Don't have an account? <a href="Signup.html" class="text-success fw-bold text-decoration-none">Sign up</a>
+                Don't have an account? <a href="./Pages/Signup.html" class="text-success fw-bold text-decoration-none">Sign up</a>
               </p>
               <ul class="summary-perks-list">
                 <li><i class="fa-solid fa-check"></i> Your cart items will be saved</li>
@@ -380,9 +380,9 @@
         
         <!-- Column 1: Brand Info -->
         <div class="col-lg-4">
-          <a href="../index.html" class="footer-logo-link">
+          <a href="index.html" class="footer-logo-link">
             <div class="footer-logo-box">
-              <img src="../freshcart-logo.svg" alt="FreshCart Logo" class="footer-logo" />
+              <img src="./freshcart-logo.svg" alt="FreshCart Logo" class="footer-logo" />
             </div>
           </a>
           <p class="footer-desc">
@@ -414,12 +414,12 @@
         <div class="col-6 col-md-3 col-lg-2">
           <h3 class="footer-heading">Shop</h3>
           <ul class="footer-links">
-            <li><a href="../index.html#products">All Products</a></li>
-            <li><a href="Categories.html">Categories</a></li>
-            <li><a href="Brands.html">Brands</a></li>
-            <li><a href="../index.html#electronics">Electronics</a></li>
-            <li><a href="../index.html#mens-fashion">Men's Fashion</a></li>
-            <li><a href="../index.html#womens-fashion">Women's Fashion</a></li>
+            <li><a href="index.html#products">All Products</a></li>
+            <li><a href="./Pages/Categories.html">Categories</a></li>
+            <li><a href="./Pages/Brands.html">Brands</a></li>
+            <li><a href="index.html#electronics">Electronics</a></li>
+            <li><a href="index.html#mens-fashion">Men's Fashion</a></li>
+            <li><a href="index.html#womens-fashion">Women's Fashion</a></li>
           </ul>
         </div>
 
@@ -427,12 +427,12 @@
         <div class="col-6 col-md-3 col-lg-2">
           <h3 class="footer-heading">Account</h3>
           <ul class="footer-links">
-            <li><a href="Login.html">My Account</a></li>
+            <li><a href="./Pages/Login.html">My Account</a></li>
             <li><a href="#orders">Order History</a></li>
-            <li><a href="Whislist.html">Wishlist</a></li>
-            <li><a href="Cart.html">Shopping Cart</a></li>
-            <li><a href="Login.html">Sign In</a></li>
-            <li><a href="Signup.html">Create Account</a></li>
+            <li><a href="./Pages/Whislist.html">Wishlist</a></li>
+            <li><a href="cart.html">Shopping Cart</a></li>
+            <li><a href="./Pages/Login.html">Sign In</a></li>
+            <li><a href="./Pages/Signup.html">Create Account</a></li>
           </ul>
         </div>
 
@@ -487,8 +487,8 @@
     </div>
   </footer>
 
-  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../JS/cart.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./JS/cart.js"></script>
 </body>
 
 </html>

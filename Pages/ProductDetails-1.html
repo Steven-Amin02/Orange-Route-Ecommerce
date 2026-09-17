@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shopping Cart - FreshCart</title>
+  <title>Logo T-Shirt Green - FreshCart</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <!-- Bootstrap CSS -->
@@ -117,7 +117,7 @@
           <!-- Cart with Badge -->
           <a href="Cart.html" class="nav-icon-link position-relative" title="Cart">
             <i class="fa-solid fa-cart-shopping"></i>
-            <span class="cart-badge">2</span>
+            <span class="cart-badge">0</span>
           </a>
 
           <!-- Sign In Button -->
@@ -161,156 +161,306 @@
   </header>
 
   <!-- ================= BREADCRUMBS ================= -->
-  <div class="cart-breadcrumb-bar">
+  <div class="breadcrumb-bar py-3 bg-white border-bottom">
     <div class="container">
       <nav aria-label="breadcrumb">
-        <ol class="breadcrumb cart-breadcrumb mb-0 align-items-center">
-          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+        <ol class="breadcrumb mb-0 align-items-center" id="breadcrumb-list">
+          <li class="breadcrumb-item">
+            <a href="../index.html" class="text-decoration-none d-flex align-items-center gap-1 text-muted">
+              <i class="fa-solid fa-house text-secondary"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="../index.html#category" class="text-decoration-none text-muted" id="breadcrumb-cat">Men's Fashion</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="../index.html#subcategory" class="text-decoration-none text-muted" id="breadcrumb-subcat">Men's Clothing</a>
+          </li>
+          <li class="breadcrumb-item active text-dark fw-medium" aria-current="page" id="breadcrumb-title">
+            Logo T-Shirt Green
+          </li>
         </ol>
       </nav>
     </div>
   </div>
 
-  <!-- ================= CART PAGE CONTENT ================= -->
-  <main class="cart-page-section">
+  <!-- ================= PRODUCT DETAILS MAIN SECTION ================= -->
+  <section class="product-details-page py-5 bg-white">
     <div class="container">
+      <div class="row g-4 g-lg-5 align-items-start">
 
-      <!-- Header Title Section -->
-      <div class="d-flex align-items-center gap-3 mb-2">
-        <div class="cart-header-icon">
-          <i class="fa-solid fa-cart-shopping"></i>
+        <!-- Left: Product Image Gallery -->
+        <div class="col-lg-5">
+          <div class="product-gallery-wrapper">
+            <!-- Big Main Image Box -->
+            <div class="gallery-main-box">
+              <img 
+                id="main-product-image" 
+                src="https://ecommerce.routemisr.com/Route-Academy-products/1680400287654-cover.jpeg" 
+                alt="Logo T-Shirt Green" 
+                class="gallery-main-img" 
+              />
+            </div>
+
+            <!-- Horizontal Thumbnails Strip -->
+            <div class="gallery-thumbnails" id="thumbnails-container">
+              <div class="thumb-box active" onclick="switchMainImage(this, 'https://ecommerce.routemisr.com/Route-Academy-products/1680400287765-1.jpeg')">
+                <img src="https://ecommerce.routemisr.com/Route-Academy-products/1680400287765-1.jpeg" alt="Thumbnail 1" />
+              </div>
+              <div class="thumb-box" onclick="switchMainImage(this, 'https://ecommerce.routemisr.com/Route-Academy-products/1680400287767-4.jpeg')">
+                <img src="https://ecommerce.routemisr.com/Route-Academy-products/1680400287767-4.jpeg" alt="Thumbnail 2" />
+              </div>
+              <div class="thumb-box" onclick="switchMainImage(this, 'https://ecommerce.routemisr.com/Route-Academy-products/1680400287767-3.jpeg')">
+                <img src="https://ecommerce.routemisr.com/Route-Academy-products/1680400287767-3.jpeg" alt="Thumbnail 3" />
+              </div>
+              <div class="thumb-box" onclick="switchMainImage(this, 'https://ecommerce.routemisr.com/Route-Academy-products/1680400287765-2.jpeg')">
+                <img src="https://ecommerce.routemisr.com/Route-Academy-products/1680400287765-2.jpeg" alt="Thumbnail 4" />
+              </div>
+            </div>
+          </div>
         </div>
-        <h1 class="cart-page-title">Shopping Cart</h1>
+
+        <!-- Right: Product Information & Purchase Options -->
+        <div class="col-lg-7">
+          <div class="product-detail-content">
+
+            <!-- Badges Row -->
+            <div class="detail-badge-group mb-2">
+              <span class="badge-cat-pill" id="product-category-badge">Men's Fashion</span>
+              <span class="badge-brand-pill" id="product-brand-badge">Jack & Jones</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="product-detail-title" id="product-title">Logo T-Shirt Green</h1>
+
+            <!-- Rating Row -->
+            <div class="detail-rating-row mb-3">
+              <div class="detail-stars" id="product-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <span class="detail-rating-score" id="product-rating-text">3.7 (13 reviews)</span>
+            </div>
+
+            <!-- Price & Discount Row -->
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <span class="product-detail-price" id="product-price">379 EGP</span>
+              <span class="text-muted text-decoration-line-through fs-5 fw-medium" id="product-old-price">744 EGP</span>
+              <span class="badge-discount-pill" id="product-discount-badge">Save 49%</span>
+            </div>
+
+            <!-- Stock Status -->
+            <div class="stock-status-pill mb-4">
+              <span class="stock-bullet">●</span>
+              <span id="product-stock-status">In Stock</span>
+            </div>
+
+            <!-- Short Description -->
+            <p class="product-detail-desc mb-4" id="product-desc">
+              Soft and comfortable cotton fabric Crew neck and short sleeves Comfortable, regular fit Wash according to care label instructions
+            </p>
+
+            <!-- Quantity Selector Row -->
+            <div class="quantity-section mb-4">
+              <label class="quantity-label">Quantity</label>
+              <div class="d-flex align-items-center gap-3">
+                <div class="quantity-stepper">
+                  <button type="button" class="stepper-btn" onclick="decrementQuantity()" aria-label="Decrease quantity">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <input type="text" id="product-qty-input" class="stepper-val" value="1" readonly />
+                  <button type="button" class="stepper-btn" onclick="incrementQuantity()" aria-label="Increase quantity">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+                <span class="stock-available-text" id="product-available-stock">111 available</span>
+              </div>
+            </div>
+
+            <!-- Total Price Bar -->
+            <div class="total-price-bar mb-4">
+              <span class="total-price-label">Total Price:</span>
+              <span class="total-price-value" id="product-total-price">379.00 EGP</span>
+            </div>
+
+            <!-- Action Buttons: Row 1 (Add to Cart + Buy Now) -->
+            <div class="d-flex gap-3 mb-3">
+              <button type="button" class="btn-detail-add-cart" id="btn-add-cart" onclick="addToCartDetailed()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Add to Cart</span>
+              </button>
+              <button type="button" class="btn-detail-buy-now" id="btn-buy-now" onclick="buyNowDetailed()">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Buy Now</span>
+              </button>
+            </div>
+
+            <!-- Action Buttons: Row 2 (Add to Wishlist + Share) -->
+            <div class="d-flex gap-3 mb-2">
+              <button type="button" class="btn-detail-wishlist-wide" id="btn-wishlist" onclick="toggleWishlistDetailed()">
+                <i class="fa-regular fa-heart"></i>
+                <span>Add to Wishlist</span>
+              </button>
+              <button type="button" class="btn-detail-share" title="Share Product" onclick="shareProductDetailed()">
+                <i class="fa-solid fa-share-nodes"></i>
+              </button>
+            </div>
+
+            <!-- 3 Horizontal Trust Badges -->
+            <div class="product-trust-badges">
+              <div class="trust-badge-item">
+                <div class="trust-badge-icon">
+                  <i class="fa-solid fa-truck"></i>
+                </div>
+                <div>
+                  <div class="trust-badge-title">Free Delivery</div>
+                  <div class="trust-badge-sub">Orders over 500</div>
+                </div>
+              </div>
+              <div class="trust-badge-item">
+                <div class="trust-badge-icon">
+                  <i class="fa-solid fa-arrow-rotate-left"></i>
+                </div>
+                <div>
+                  <div class="trust-badge-title">14 Days Return</div>
+                  <div class="trust-badge-sub">Hassle free 1</div>
+                </div>
+              </div>
+              <div class="trust-badge-item">
+                <div class="trust-badge-icon">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                  <div class="trust-badge-title">Secure Payment</div>
+                  <div class="trust-badge-sub">100% Protected</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
-      <p class="text-secondary mb-4">
-        You have <span class="text-success fw-bold" id="cart-item-count-text">2 items</span> in your cart
-      </p>
 
-      <!-- Cart Grid Row -->
-      <div class="row g-4 align-items-start">
-
-        <!-- Left: Cart Items List -->
-        <div class="col-lg-8">
-          <div id="cart-items-container">
-            <!-- Item 1 -->
-            <div class="cart-item-card" id="cart-item-6428ebc6dc1175abc65ca0b9">
-              <div class="cart-item-left">
-                <a href="ProductDetails.html?id=6428ebc6dc1175abc65ca0b9" class="cart-item-img-box text-decoration-none">
-                  <img src="https://ecommerce.routemisr.com/Route-Academy-products/1680403397402-cover.jpeg" alt="Woman Shawl" class="cart-item-img" />
-                </a>
-                <div class="cart-item-info">
-                  <a href="ProductDetails.html?id=6428ebc6dc1175abc65ca0b9" class="cart-item-title">Woman Shawl</a>
-                  <span class="cart-item-category">Women's Fashion</span>
-                  <div class="cart-item-unit-price">149 EGP</div>
-                  <div class="cart-stepper">
-                    <button type="button" class="cart-stepper-btn-minus" onclick="changeQuantity('6428ebc6dc1175abc65ca0b9', -1)" aria-label="Decrease">
-                      <i class="fa-solid fa-minus"></i>
-                    </button>
-                    <input type="text" class="cart-stepper-val" value="1" readonly />
-                    <button type="button" class="cart-stepper-btn-plus" onclick="changeQuantity('6428ebc6dc1175abc65ca0b9', 1)" aria-label="Increase">
-                      <i class="fa-solid fa-plus"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="cart-item-right">
-                <div class="cart-item-total-block">
-                  <div class="cart-item-total-label">Total</div>
-                  <div class="cart-item-total-price">149 <span>EGP</span></div>
-                </div>
-                <button type="button" class="cart-item-delete-btn" onclick="removeCartItem('6428ebc6dc1175abc65ca0b9')" title="Remove item" aria-label="Remove item">
-                  <i class="fa-regular fa-trash-can"></i>
-                </button>
-              </div>
-            </div>
-
-            <!-- Item 2 -->
-            <div class="cart-item-card" id="cart-item-6428eb43dc1175abc65ca0b3">
-              <div class="cart-item-left">
-                <a href="ProductDetails.html?id=6428eb43dc1175abc65ca0b3" class="cart-item-img-box text-decoration-none">
-                  <img src="https://ecommerce.routemisr.com/Route-Academy-products/1680403266739-cover.jpeg" alt="Woman Bordeaux Long Sleeve Blouse BORDEAUX" class="cart-item-img" />
-                </a>
-                <div class="cart-item-info">
-                  <a href="ProductDetails.html?id=6428eb43dc1175abc65ca0b3" class="cart-item-title">Woman Bordeaux Long Sleeve Blouse BORDEAUX</a>
-                  <span class="cart-item-category">Women's Fashion</span>
-                  <div class="cart-item-unit-price">349 EGP</div>
-                  <div class="cart-stepper">
-                    <button type="button" class="cart-stepper-btn-minus" onclick="changeQuantity('6428eb43dc1175abc65ca0b3', -1)" aria-label="Decrease">
-                      <i class="fa-solid fa-minus"></i>
-                    </button>
-                    <input type="text" class="cart-stepper-val" value="1" readonly />
-                    <button type="button" class="cart-stepper-btn-plus" onclick="changeQuantity('6428eb43dc1175abc65ca0b3', 1)" aria-label="Increase">
-                      <i class="fa-solid fa-plus"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="cart-item-right">
-                <div class="cart-item-total-block">
-                  <div class="cart-item-total-label">Total</div>
-                  <div class="cart-item-total-price">349 <span>EGP</span></div>
-                </div>
-                <button type="button" class="cart-item-delete-btn" onclick="removeCartItem('6428eb43dc1175abc65ca0b3')" title="Remove item" aria-label="Remove item">
-                  <i class="fa-regular fa-trash-can"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bottom Actions -->
-          <div class="cart-bottom-actions" id="cart-bottom-actions-bar">
-            <a href="Shop.html" class="cart-continue-link">
-              <i class="fa-solid fa-arrow-left"></i>
-              <span>Continue Shopping</span>
-            </a>
-            <button type="button" class="cart-clear-btn" onclick="clearCart()">
-              <i class="fa-regular fa-trash-can"></i>
-              <span>Clear all items</span>
-            </button>
-          </div>
+      <!-- ================= PRODUCT TABS SECTION ================= -->
+      <div class="product-tabs-wrapper">
+        <!-- Tabs Navigation -->
+        <div class="product-tabs-nav" role="tablist">
+          <button type="button" class="tab-nav-btn active" id="tab-btn-details" onclick="switchTab('details')">
+            <i class="fa-solid fa-file-lines"></i>
+            <span>Product Details</span>
+          </button>
+          <button type="button" class="tab-nav-btn" id="tab-btn-reviews" onclick="switchTab('reviews')">
+            <i class="fa-regular fa-star"></i>
+            <span id="tab-reviews-count">Reviews (12)</span>
+          </button>
+          <button type="button" class="tab-nav-btn" id="tab-btn-shipping" onclick="switchTab('shipping')">
+            <i class="fa-solid fa-truck"></i>
+            <span>Shipping &amp; Returns</span>
+          </button>
         </div>
 
-        <!-- Right: Order Summary Card -->
-        <div class="col-lg-4">
-          <div class="order-summary-card">
-            <div class="order-summary-header">
-              <h2 class="order-summary-title">Order Summary</h2>
+        <!-- Tab 1: Product Details -->
+        <div class="tab-pane-content" id="tab-content-details">
+          <h4 class="spec-card-title mb-2">About this Product</h4>
+          <p class="text-secondary mb-4" id="tab-product-desc" style="line-height: 1.65; max-width: 900px;">
+            Soft and comfortable cotton fabric Crew neck and short sleeves Comfortable, regular fit Wash according to care label instructions
+          </p>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="spec-card">
+                <h5 class="spec-card-title">Product Information</h5>
+                <table class="spec-table">
+                  <tbody>
+                    <tr>
+                      <td class="spec-label">Category</td>
+                      <td class="spec-val" id="spec-category">Men's Fashion</td>
+                    </tr>
+                    <tr>
+                      <td class="spec-label">SubCategory</td>
+                      <td class="spec-val" id="spec-subcategory">Men's Clothing</td>
+                    </tr>
+                    <tr>
+                      <td class="spec-label">Brand</td>
+                      <td class="spec-val" id="spec-brand">Jack &amp; Jones</td>
+                    </tr>
+                    <tr>
+                      <td class="spec-label">Items Sold</td>
+                      <td class="spec-val" id="spec-sold">279+ sold</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div class="order-summary-body">
-              <div class="summary-row">
-                <span class="summary-label">Subtotal <span id="summary-items-count">(2 items)</span></span>
-                <span class="summary-value" id="summary-subtotal-price">498 EGP</span>
+            <div class="col-md-6">
+              <div class="spec-card">
+                <h5 class="spec-card-title">Key Features</h5>
+                <ul class="feature-list">
+                  <li><i class="fa-solid fa-check"></i> Premium Quality Product</li>
+                  <li><i class="fa-solid fa-check"></i> 100% Authentic Guarantee</li>
+                  <li><i class="fa-solid fa-check"></i> Neat &amp; Secure Packaging</li>
+                  <li><i class="fa-solid fa-check"></i> Quality Tested</li>
+                </ul>
               </div>
-              <div class="summary-row">
-                <span class="summary-label">Shipping</span>
-                <span class="summary-value shipping-free">Calculated at checkout</span>
-              </div>
-              <div class="summary-divider"></div>
-              <div class="summary-total-row">
-                <span class="summary-total-label">Estimated Total</span>
-                <span class="summary-total-value" id="summary-estimated-total">498 EGP</span>
-              </div>
-              <a href="Login.html" class="btn-checkout-login">
-                <i class="fa-solid fa-user"></i>
-                <span>Login to Checkout</span>
-              </a>
-              <p class="text-center text-secondary small mt-3 mb-4">
-                Don't have an account? <a href="Signup.html" class="text-success fw-bold text-decoration-none">Sign up</a>
-              </p>
-              <ul class="summary-perks-list">
-                <li><i class="fa-solid fa-check"></i> Your cart items will be saved</li>
-                <li><i class="fa-solid fa-check"></i> Track your orders easily</li>
-                <li><i class="fa-solid fa-check"></i> Access exclusive member deals</li>
-              </ul>
             </div>
           </div>
         </div>
 
+        <!-- Tab 2: Reviews -->
+        <div class="tab-pane-content d-none" id="tab-content-reviews">
+          <h4 class="spec-card-title mb-3">Customer Reviews</h4>
+          <div id="reviews-list-container">
+            <!-- Reviews dynamically inserted here -->
+          </div>
+        </div>
+
+        <!-- Tab 3: Shipping & Returns -->
+        <div class="tab-pane-content d-none" id="tab-content-shipping">
+          <h4 class="spec-card-title mb-2">Shipping &amp; Delivery Policy</h4>
+          <p class="text-secondary mb-3">
+            All orders placed before 3:00 PM are processed and shipped on the same business day. Delivery across Egypt usually takes 2 to 4 business days.
+          </p>
+          <div class="spec-card mb-3">
+            <ul class="feature-list">
+              <li><i class="fa-solid fa-truck text-success"></i> <strong>Free Standard Delivery:</strong> On all orders above 500 EGP.</li>
+              <li><i class="fa-solid fa-box-open text-success"></i> <strong>14-Day Return Guarantee:</strong> Hassle-free exchanges and returns within 14 days of receiving your order.</li>
+              <li><i class="fa-solid fa-shield-halved text-success"></i> <strong>Damaged or Incorrect Item:</strong> Contact our 24/7 support for immediate replacement without extra fees.</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
     </div>
-  </main>
+  </section>
+
+  <!-- ================= "YOU MAY ALSO LIKE" SECTION ================= -->
+  <section class="related-products-section border-top">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="section-title-left">
+          <span class="title-accent-bar"></span>
+          <h2 class="section-heading-text">You May Also <span>Like</span></h2>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <button type="button" class="slider-arrow-btn" title="Previous">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button type="button" class="slider-arrow-btn" title="Next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- 5-column product grid matching screenshot -->
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3" id="related-products-grid">
+        <!-- Products dynamically rendered by JS -->
+      </div>
+    </div>
+  </section>
 
   <!-- ================= FEATURES STRIP ================= -->
   <div class="features-strip">
@@ -380,7 +530,7 @@
         
         <!-- Column 1: Brand Info -->
         <div class="col-lg-4">
-          <a href="../index.html" class="footer-logo-link">
+          <a href="/" class="footer-logo-link">
             <div class="footer-logo-box">
               <img src="../freshcart-logo.svg" alt="FreshCart Logo" class="footer-logo" />
             </div>
@@ -415,8 +565,8 @@
           <h3 class="footer-heading">Shop</h3>
           <ul class="footer-links">
             <li><a href="../index.html#products">All Products</a></li>
-            <li><a href="Categories.html">Categories</a></li>
-            <li><a href="Brands.html">Brands</a></li>
+            <li><a href="../index.html#categories">Categories</a></li>
+            <li><a href="../index.html#brands">Brands</a></li>
             <li><a href="../index.html#electronics">Electronics</a></li>
             <li><a href="../index.html#mens-fashion">Men's Fashion</a></li>
             <li><a href="../index.html#womens-fashion">Women's Fashion</a></li>
@@ -488,7 +638,7 @@
   </footer>
 
   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../JS/cart.js"></script>
+  <script src="../JS/product-details.js"></script>
 </body>
 
 </html>
