@@ -5,6 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FreshCart - eCommerce Navbar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="style.css" />
@@ -18,24 +23,22 @@
       <!-- Left messages -->
       <div class="d-flex align-items-center gap-3 gap-md-4 py-1">
         <span class="d-flex align-items-center gap-2 top-item">
-          <i class="bi bi-truck text-success"></i>
+          <i class="fa-solid fa-truck text-success"></i>
           <span>Free Shipping on Orders 500 EGP</span>
         </span>
         <span class="d-none d-sm-flex align-items-center gap-2 top-item">
-          <i class="bi bi-gift-fill text-success"></i>
+          <i class="fa-solid fa-gift text-success"></i>
           <span>New Arrivals Daily</span>
         </span>
       </div>
 
       <!-- Right contact & auth -->
       <div class="d-flex align-items-center gap-3 gap-md-4 py-1">
-        <a href="tel:+18001234567"
-          class="top-link d-none d-md-flex align-items-center gap-1">
+        <a href="tel:+18001234567" class="top-link d-none d-md-flex align-items-center gap-1">
           <i class="bi bi-telephone-fill" style="font-size: 0.82rem;"></i>
           <span>+1 (800) 123-4567</span>
         </a>
-        <a href="mailto:support@freshcart.com"
-          class="top-link d-none d-lg-flex align-items-center gap-1">
+        <a href="mailto:support@freshcart.com" class="top-link d-none d-lg-flex align-items-center gap-1">
           <i class="bi bi-envelope" style="font-size: 0.9rem;"></i>
           <span>support@freshcart.com</span>
         </a>
@@ -63,20 +66,18 @@
       <!-- Search Bar (Desktop) -->
       <div class="search-wrapper me-xl-3 flex-grow-1 flex-xl-grow-0 d-none d-md-block">
         <form class="position-relative m-0" role="search" onsubmit="event.preventDefault();">
-          <input class="form-control search-input" type="search"
-            placeholder="Search for products, brands and more..." aria-label="Search" />
-          <button
-            class="btn btn-success search-btn rounded-circle position-absolute"
-            type="submit" title="Search">
+          <input class="form-control search-input" type="search" placeholder="Search for products, brands and more..."
+            aria-label="Search" />
+          <button class="btn btn-success search-btn rounded-circle position-absolute" type="submit" title="Search">
             <i class="bi bi-search text-white"></i>
           </button>
         </form>
       </div>
 
       <!-- Mobile hamburger toggler -->
-      <button class="navbar-toggler border-0 shadow-none p-1 ms-auto d-xl-none" type="button"
-        data-bs-toggle="collapse" data-bs-target="#navbarMainContent" aria-controls="navbarMainContent"
-        aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler border-0 shadow-none p-1 ms-auto d-xl-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarMainContent" aria-controls="navbarMainContent" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -85,11 +86,9 @@
         <!-- Mobile Search Input (Visible only in mobile collapsed view) -->
         <div class="d-md-none my-3">
           <form class="position-relative m-0" role="search" onsubmit="event.preventDefault();">
-            <input class="form-control search-input" type="search"
-              placeholder="Search for products, brands and more..." aria-label="Search" />
-            <button
-              class="btn btn-success search-btn rounded-circle position-absolute"
-              type="submit">
+            <input class="form-control search-input" type="search" placeholder="Search for products, brands and more..."
+              aria-label="Search" />
+            <button class="btn btn-success search-btn rounded-circle position-absolute" type="submit">
               <i class="bi bi-search text-white"></i>
             </button>
           </form>
@@ -105,8 +104,8 @@
           </li>
           <!-- Categories Dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link nav-menu-link dropdown-toggle" href="#" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link nav-menu-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               <span>Categories</span>
               <i class="bi bi-chevron-down custom-chevron"></i>
             </a>
@@ -133,7 +132,8 @@
         </ul>
 
         <!-- Right Action Items -->
-        <div class="d-flex align-items-center gap-2 gap-xl-3 ms-xl-auto pt-3 pt-xl-0 border-top border-top-xl-0 mt-3 mt-xl-0">
+        <div
+          class="d-flex align-items-center gap-2 gap-xl-3 ms-xl-auto pt-3 pt-xl-0 border-top border-top-xl-0 mt-3 mt-xl-0">
           <!-- Support 24/7 Widget -->
           <a href="tel:+18001234567" class="support-widget d-flex align-items-center gap-2 me-xl-1">
             <div class="support-icon-wrapper">
@@ -168,74 +168,87 @@
     </div>
   </nav>
 
-  <main class="container my-4">
-    <div id="heroCarousel" class="carousel slide position-relative" data-bs-ride="carousel">
-      <!-- Carousel Indicators (Dots) -->
-      <div class="hero-indicators">
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+  <!-- Hero Slider Section -->
+  <main class="container-fluid my-4">
+    <div id="heroCarousel" class="carousel slide hero-slider-container" data-bs-ride="carousel" data-bs-interval="7000">
+      <!-- Carousel Indicators (Pagination Dots) -->
+      <div class="slider-pagination">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
 
       <!-- Carousel Slides -->
-      <div class="carousel-inner rounded-4 overflow-hidden">
-        <div class="carousel-item active" data-bs-interval="5000">
-          <div class="hero-banner">
-            <div class="hero-content ps-4 ps-md-5 ms-md-3">
-              <h1 class="hero-title">
-                Fresh Products Delivered<br>to your Door
-              </h1>
-              <p class="hero-subtitle">
-                Get 20% off your first order
-              </p>
-              <div class="d-flex flex-wrap gap-3">
-                <a href="#shop" class="btn hero-btn-shop">Shop Now</a>
-                <a href="#deals" class="btn hero-btn-deals">View Deals</a>
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="hero-slide-bg">
+            <div class="hero-slide-overlay">
+              <div class="hero-slide-content">
+                <h2 class="hero-slide-title">
+                  Fresh Products Delivered to your Door
+                </h2>
+                <p class="hero-slide-subtitle">
+                  Get 20% off your first order
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <a class="btn-hero-shop" href="#products">Shop Now</a>
+                  <a class="btn-hero-deals" href="#deals">View Deals</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="carousel-item" data-bs-interval="5000">
-          <div class="hero-banner">
-            <div class="hero-content ps-4 ps-md-5 ms-md-3">
-              <h1 class="hero-title">
-                Organic Greens &amp; Fruits<br>Freshly Harvested
-              </h1>
-              <p class="hero-subtitle">
-                Farm-to-table freshness guaranteed daily
-              </p>
-              <div class="d-flex flex-wrap gap-3">
-                <a href="#shop" class="btn hero-btn-shop">Shop Now</a>
-                <a href="#deals" class="btn hero-btn-deals">View Deals</a>
+        <!-- Slide 2 -->
+        <div class="carousel-item" data-bs-interval="6000">
+          <div class="hero-slide-bg">
+            <div class="hero-slide-overlay">
+              <div class="hero-slide-content">
+                <h2 class="hero-slide-title">
+                  Premium Quality Guaranteed
+                </h2>
+                <p class="hero-slide-subtitle">
+                  Fresh from farm to your table
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <a class="btn-hero-shop" href="#products">Shop Now</a>
+                  <a class="btn-hero-deals" href="#about">Learn More</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="carousel-item" data-bs-interval="5000">
-          <div class="hero-banner">
-            <div class="hero-content ps-4 ps-md-5 ms-md-3">
-              <h1 class="hero-title">
-                Quality Groceries at<br>Unbeatable Prices
-              </h1>
-              <p class="hero-subtitle">
-                Free shipping on orders over 500 EGP
-              </p>
-              <div class="d-flex flex-wrap gap-3">
-                <a href="#shop" class="btn hero-btn-shop">Shop Now</a>
-                <a href="#deals" class="btn hero-btn-deals">View Deals</a>
+        <!-- Slide 3 -->
+        <div class="carousel-item" data-bs-interval="6000">
+          <div class="hero-slide-bg">
+            <div class="hero-slide-overlay">
+              <div class="hero-slide-content">
+                <h2 class="hero-slide-title">
+                  Fast &amp; Free Delivery
+                </h2>
+                <p class="hero-slide-subtitle">
+                  Same day delivery available
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <a class="btn-hero-shop" href="#products">Order Now</a>
+                  <a class="btn-hero-deals" href="#delivery">Delivery Info</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Carousel Controls (Previous / Next Arrows) -->
-      <button class="hero-arrow-btn hero-arrow-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Previous">
+      <!-- Navigation Arrows -->
+      <button class="slider-arrow-btn slider-arrow-prev" type="button" data-bs-target="#heroCarousel"
+        data-bs-slide="prev" aria-label="Previous">
         <i class="bi bi-chevron-left"></i>
       </button>
-      <button class="hero-arrow-btn hero-arrow-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Next">
+      <button class="slider-arrow-btn slider-arrow-next" type="button" data-bs-target="#heroCarousel"
+        data-bs-slide="next" aria-label="Next">
         <i class="bi bi-chevron-right"></i>
       </button>
     </div>
