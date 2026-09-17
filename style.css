@@ -853,7 +853,7 @@ textarea,
 .products-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 @media (min-width: 576px) {
@@ -868,15 +868,16 @@ textarea,
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .products-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .products-grid {
     grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
   }
 }
 
@@ -985,6 +986,7 @@ textarea,
   -webkit-box-orient: vertical;
   overflow: hidden;
   line-height: 1.35;
+  min-height: 2.7em;
 }
 
 .product-name a {

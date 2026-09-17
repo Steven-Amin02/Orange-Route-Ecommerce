@@ -1,27 +1,28 @@
 /**
  * FreshCart - Main JavaScript
  * 
- * Featured Products Component & API Integration
- * Data is currently statically rendered in index.html matching the exact design.
- * When you are ready to fetch dynamically from your API, call fetchProducts().
+ * Fetches 40 products from the Route eCommerce API
+ * and renders them in the home page grid (5 cards per row).
  */
 
 // API Configuration
 const API_CONFIG = {
   baseUrl: 'https://ecommerce.routemisr.com/api/v1',
-  productsEndpoint: '/products'
+  productsEndpoint: '/products',
+  limit: 40
 };
 
 /**
- * Generate rating stars HTML based on numeric rating (e.g. 4.6)
+ * Generate accurate 5-star rating HTML based on numeric rating (e.g. 4.6)
  * @param {number} rating - Average rating score
  * @returns {string} HTML string of 5 star icons
  */
 function renderRatingStars(rating = 0) {
   let starsHtml = '';
-  const fullStars = Math.floor(rating);
-  const hasHalfStar = (rating - fullStars) >= 0.4 && (rating - fullStars) < 0.8;
-  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+  const roundedRating = Math.round(rating * 2) / 2; // rounds to nearest 0.5
+  const fullStars = Math.floor(roundedRating);
+  const hasHalfStar = roundedRating % 1 !== 0;
+  const emptyStars = Math.max(0, 5 - fullStars - (hasHalfStar ? 1 : 0));
 
   // Full stars
   for (let i = 0; i < fullStars; i++) {
@@ -56,7 +57,7 @@ function createProductCardHTML(product) {
 
   return `
     <div class="product-card" data-id="${id}">
-      <!-- Top Image Box with Floating Actions -->
+      <!-- Top Image Box with Floating Action Buttons -->
       <div class="product-img-box">
         <img 
           src="${imageCover}" 
@@ -102,7 +103,7 @@ function createProductCardHTML(product) {
 }
 
 /**
- * Render a list of products into the #products-container
+ * Render products into the grid container
  * @param {Array} products - Array of product objects
  */
 function renderProducts(products) {
@@ -114,28 +115,33 @@ function renderProducts(products) {
     return;
   }
 
+  // Render all cards
   container.innerHTML = products.map(createProductCardHTML).join('');
+  
+  // Re-attach interactive button events
   attachProductEvents();
 }
 
 /**
- * Fetch products from Route eCommerce API (or custom backend)
- * Ready to be invoked whenever you want to load live API data!
+ * Fetch 40 products from Route eCommerce API and display them in the home page
  */
 async function fetchProducts() {
   const container = document.getElementById('products-container');
+  if (!container) return;
+
   try {
-    const response = await fetch(`${API_CONFIG.baseUrl}${API_CONFIG.productsEndpoint}`);
+    const response = await fetch(`${API_CONFIG.baseUrl}${API_CONFIG.productsEndpoint}?limit=${API_CONFIG.limit}`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    const result = await response.json();
-    const products = result.data || result;
     
-    // Render the fetched products
+    const result = await response.json();
+    const products = (result.data || result).slice(0, API_CONFIG.limit);
+    
+    // Render the 40 products
     renderProducts(products);
   } catch (error) {
-    console.error('Failed to fetch products from API:', error);
+    console.error('Error fetching products from API:', error);
   }
 }
 
@@ -175,10 +181,9 @@ function attachProductEvents() {
   });
 }
 
-// Initialize card interactions on page load
-document.addEventListener('DOMContentLoaded', () => {
-  attachProductEvents();
-  
-  // UNCOMMENT THIS LINE WHEN YOU ARE READY TO FETCH DATA FROM THE API:
-  // fetchProducts();
-});
+// Automatically fetch and display 40 products on load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', fetchProducts);
+} else {
+  fetchProducts();
+}
