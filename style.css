@@ -19,6 +19,20 @@
   --bs-success-rgb: 22, 163, 74;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 body {
   font-family: 'Exo', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background-color: #ffffff;
@@ -1059,6 +1073,8 @@ textarea,
 .newsletter-app-section {
   padding: 3rem 0;
   background-color: #ffffff;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .newsletter-app-card {
@@ -1372,6 +1388,8 @@ textarea,
   background-color: #f0fdf4;
   border-top: 1px solid #dcfce7;
   border-bottom: 1px solid #dcfce7;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .strip-feature-item {
@@ -1415,6 +1433,8 @@ textarea,
 .main-footer {
   background-color: #0b1320;
   color: #ffffff;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .footer-logo-link {
@@ -1439,9 +1459,9 @@ textarea,
 .footer-desc {
   font-size: 0.875rem;
   color: #94a3b8;
-  line-height: 1.65;
+  line-height: 1.625;
   margin-bottom: 1.5rem;
-  max-width: 360px;
+  max-width: 320px;
 }
 
 .footer-contact-list {
@@ -1475,12 +1495,12 @@ textarea,
 .footer-socials {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.625rem;
 }
 
 .social-icon-btn {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background-color: #1e293b;
   color: #94a3b8;
@@ -1489,7 +1509,7 @@ textarea,
   justify-content: center;
   text-decoration: none;
   transition: all 0.2s ease;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
 }
 
 .social-icon-btn:hover {
@@ -1499,7 +1519,7 @@ textarea,
 }
 
 .footer-heading {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #ffffff;
   margin-bottom: 1.25rem;
@@ -1529,6 +1549,8 @@ textarea,
 
 .footer-bottom-bar {
   border-top: 1px solid #1e293b;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .footer-copyright {
