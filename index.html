@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FreshCart - eCommerce Navbar</title>
+  <title>FreshCart</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,300..900;1,300..900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
@@ -16,162 +16,157 @@
 </head>
 
 <body>
-  <!-- Top Bar -->
-  <header class="top-header py-2">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+  <!-- Top Bar: h-10 (40px) -->
+  <div class="top-header d-none d-lg-block">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center top-inner">
+        <!-- Left announcements -->
+        <div class="d-flex align-items-center gap-4 text-secondary">
+          <span class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-truck text-success" style="font-size: 0.75rem;"></i>
+            <span>Free Shipping on Orders 500 EGP</span>
+          </span>
+          <span class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-gift text-success" style="font-size: 0.75rem;"></i>
+            <span>New Arrivals Daily</span>
+          </span>
+        </div>
 
-      <!-- Left messages -->
-      <div class="d-flex align-items-center gap-3 gap-md-4 py-1">
-        <span class="d-flex align-items-center gap-2 top-item">
-          <i class="fa-solid fa-truck text-success"></i>
-          <span>Free Shipping on Orders 500 EGP</span>
-        </span>
-        <span class="d-none d-sm-flex align-items-center gap-2 top-item">
-          <i class="fa-solid fa-gift text-success"></i>
-          <span>New Arrivals Daily</span>
-        </span>
+        <!-- Right contact & auth -->
+        <div class="d-flex align-items-center gap-4">
+          <div class="d-flex align-items-center gap-3 text-secondary">
+            <a href="tel:+18001234567" class="top-link d-flex align-items-center gap-1.5">
+              <i class="fa-solid fa-phone" style="font-size: 0.75rem;"></i>
+              <span>+1 (800) 123-4567</span>
+            </a>
+            <a href="mailto:support@freshcart.com" class="top-link d-flex align-items-center gap-1.5">
+              <i class="fa-regular fa-envelope me-1" style="font-size: 0.75rem;"></i>
+              <span>support@freshcart.com</span>
+            </a>
+          </div>
+          <span class="top-divider"></span>
+          <div class="d-flex align-items-center gap-3">
+            <a href="#signin" class="top-link d-flex align-items-center gap-1.5">
+              <i class="fa-regular fa-user" style="font-size: 0.75rem;"></i>
+              <span>Sign In</span>
+            </a>
+            <a href="#signup" class="top-link d-flex align-items-center gap-1.5">
+              <i class="fa-solid fa-user-plus" style="font-size: 0.75rem;"></i>
+              <span>Sign Up</span>
+            </a>
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
 
-      <!-- Right contact & auth -->
-      <div class="d-flex align-items-center gap-3 gap-md-4 py-1">
-        <a href="tel:+18001234567" class="top-link d-none d-md-flex align-items-center gap-1">
-          <i class="bi bi-telephone-fill" style="font-size: 0.82rem;"></i>
-          <span>+1 (800) 123-4567</span>
+  <!-- Main Navbar Header: h-[72px] -->
+  <header class="main-header">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between main-header-inner gap-3 gap-lg-4">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center shrink-0 me-0" href="index.html">
+          <img src="./freshcart-logo.svg" alt="FreshCart" height="32" />
         </a>
-        <a href="mailto:support@freshcart.com" class="top-link d-none d-lg-flex align-items-center gap-1">
-          <i class="bi bi-envelope" style="font-size: 0.9rem;"></i>
-          <span>support@freshcart.com</span>
-        </a>
-        <span class="top-divider d-none d-lg-inline">|</span>
-        <a href="#signin" class="top-link d-flex align-items-center gap-1">
-          <i class="bi bi-person" style="font-size: 1rem;"></i>
-          <span>Sign In</span>
-        </a>
-        <a href="#signup" class="top-link d-flex align-items-center gap-1">
-          <i class="bi bi-person-plus" style="font-size: 1rem;"></i>
-          <span>Sign Up</span>
-        </a>
+
+        <!-- Search Bar -->
+        <form class="search-form d-none d-lg-flex position-relative m-0" role="search"
+          onsubmit="event.preventDefault();">
+          <input class="search-input" type="text" placeholder="Search for products, brands and more..."
+            aria-label="Search" />
+          <button class="search-btn" type="submit" title="Search">
+            <i class="fa-solid fa-magnifying-glass" style="font-size: 0.875rem;"></i>
+          </button>
+        </form>
+
+        <!-- Navigation Menu Links -->
+        <nav class="nav-menu d-none d-xl-flex">
+          <a class="nav-menu-link" href="#">Home</a>
+          <a class="nav-menu-link" href="#">Shop</a>
+          <div class="dropdown">
+            <a class="nav-menu-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span>Categories</span>
+              <i class="fa-solid fa-chevron-down custom-chevron ms-1"></i>
+            </a>
+            <ul class="dropdown-menu shadow border-0 mt-2 py-2">
+              <li><a class="dropdown-item" href="#categories">All Categories</a></li>
+              <li><a class="dropdown-item" href="#categories">Fresh Fruits &amp; Vegetables</a></li>
+              <li><a class="dropdown-item" href="#categories">Dairy, Bread &amp; Eggs</a></li>
+              <li><a class="dropdown-item" href="#categories">Beverages &amp; Drinks</a></li>
+              <li><a class="dropdown-item" href="#categories">Bakery &amp; Biscuits</a></li>
+              <li><a class="dropdown-item" href="#categories">Snacks &amp; Munchies</a></li>
+            </ul>
+          </div>
+          <a class="nav-menu-link" href="#">Brands</a>
+        </nav>
+
+        <!-- Right Actions Group -->
+        <div class="d-flex align-items-center gap-1 gap-lg-2">
+          <!-- Support 24/7 -->
+          <a href="tel:+18001234567" class="support-widget d-none d-lg-flex">
+            <div class="support-icon">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div>
+              <div class="support-label">Support</div>
+              <div class="support-value">24/7 Help</div>
+            </div>
+          </a>
+
+          <!-- Wishlist -->
+          <a href="#wishlist" class="nav-icon-link" title="Wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </a>
+
+          <!-- Cart with Badge -->
+          <a href="#cart" class="nav-icon-link position-relative" title="Cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-badge">1</span>
+          </a>
+
+          <!-- Sign In Button -->
+          <a href="#signin" class="btn-nav-signin d-none d-lg-flex">
+            <i class="fa-regular fa-user" style="font-size: 0.75rem;"></i>
+            <span>Sign In</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggler -->
+          <button class="btn border-0 p-2 d-xl-none text-dark fs-4" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Collapsible Menu -->
+    <div class="collapse d-xl-none border-top bg-white" id="mobileNav">
+      <div class="container py-3">
+        <form class="mb-3 position-relative" role="search" onsubmit="event.preventDefault();">
+          <input class="search-input" type="text" placeholder="Search products..." aria-label="Search" />
+          <button class="search-btn" type="submit">
+            <i class="fa-solid fa-magnifying-glass" style="font-size: 0.875rem;"></i>
+          </button>
+        </form>
+        <div class="d-flex flex-column gap-2 mb-3">
+          <a class="nav-menu-link" href="#">Home</a>
+          <a class="nav-menu-link" href="#">Shop</a>
+          <a class="nav-menu-link" href="#categories">Categories</a>
+          <a class="nav-menu-link" href="#">Brands</a>
+        </div>
+        <div class="pt-3 border-top d-flex gap-2">
+          <a href="#signin" class="btn btn-success flex-grow-1 rounded-pill py-2">Sign In</a>
+          <a href="#signup" class="btn btn-outline-success flex-grow-1 rounded-pill py-2">Sign Up</a>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- Main Navbar -->
-  <nav class="navbar navbar-expand-xl bg-white border-bottom sticky-top py-2.5">
-    <div class="container">
-      <!-- Brand Logo -->
-      <a class="navbar-brand d-flex align-items-center me-3 me-xl-4" href="index.html">
-        <img src="./freshcart-logo.svg" alt="FreshCart Logo" height="31" class="d-inline-block align-text-top" />
-      </a>
-
-      <!-- Search Bar (Desktop) -->
-      <div class="search-wrapper me-xl-3 flex-grow-1 flex-xl-grow-0 d-none d-md-block">
-        <form class="position-relative m-0" role="search" onsubmit="event.preventDefault();">
-          <input class="form-control search-input" type="search" placeholder="Search for products, brands and more..."
-            aria-label="Search" />
-          <button class="btn btn-success search-btn rounded-circle position-absolute" type="submit" title="Search">
-            <i class="bi bi-search text-white"></i>
-          </button>
-        </form>
-      </div>
-
-      <!-- Mobile hamburger toggler -->
-      <button class="navbar-toggler border-0 shadow-none p-1 ms-auto d-xl-none" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarMainContent" aria-controls="navbarMainContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Collapsible Content -->
-      <div class="collapse navbar-collapse" id="navbarMainContent">
-        <!-- Mobile Search Input (Visible only in mobile collapsed view) -->
-        <div class="d-md-none my-3">
-          <form class="position-relative m-0" role="search" onsubmit="event.preventDefault();">
-            <input class="form-control search-input" type="search" placeholder="Search for products, brands and more..."
-              aria-label="Search" />
-            <button class="btn btn-success search-btn rounded-circle position-absolute" type="submit">
-              <i class="bi bi-search text-white"></i>
-            </button>
-          </form>
-        </div>
-
-        <!-- Navigation Links -->
-        <ul class="navbar-nav align-items-xl-center gap-1 gap-xl-2 mb-2 mb-xl-0 ms-xl-2">
-          <li class="nav-item">
-            <a class="nav-link nav-menu-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-menu-link" href="#">Shop</a>
-          </li>
-          <!-- Categories Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link nav-menu-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <span>Categories</span>
-              <i class="bi bi-chevron-down custom-chevron"></i>
-            </a>
-            <ul class="dropdown-menu shadow-sm border rounded-3 mt-xl-2 py-2">
-              <li><a class="dropdown-item py-2 d-flex align-items-center gap-2" href="#"><i
-                    class="bi bi-apple text-success"></i> Fresh Fruits & Vegetables</a></li>
-              <li><a class="dropdown-item py-2 d-flex align-items-center gap-2" href="#"><i
-                    class="bi bi-egg-fried text-success"></i> Dairy, Bread & Eggs</a></li>
-              <li><a class="dropdown-item py-2 d-flex align-items-center gap-2" href="#"><i
-                    class="bi bi-cup-hot text-success"></i> Beverages & Drinks</a></li>
-              <li><a class="dropdown-item py-2 d-flex align-items-center gap-2" href="#"><i
-                    class="bi bi-basket text-success"></i> Bakery & Biscuits</a></li>
-              <li><a class="dropdown-item py-2 d-flex align-items-center gap-2" href="#"><i
-                    class="bi bi-cookie text-success"></i> Snacks & Munchies</a></li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li><a class="dropdown-item py-2 text-success fw-semibold" href="#">View All Categories &rarr;</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-menu-link" href="#">Brands</a>
-          </li>
-        </ul>
-
-        <!-- Right Action Items -->
-        <div
-          class="d-flex align-items-center gap-2 gap-xl-3 ms-xl-auto pt-3 pt-xl-0 border-top border-top-xl-0 mt-3 mt-xl-0">
-          <!-- Support 24/7 Widget -->
-          <a href="tel:+18001234567" class="support-widget d-flex align-items-center gap-2 me-xl-1">
-            <div class="support-icon-wrapper">
-              <i class="bi bi-headset"></i>
-            </div>
-            <div class="d-flex flex-column justify-content-center">
-              <span class="support-label">Support</span>
-              <span class="support-value">24/7 Help</span>
-            </div>
-          </a>
-
-          <!-- Vertical Divider -->
-          <div class="nav-vertical-divider d-none d-xl-block"></div>
-
-          <!-- Wishlist -->
-          <a href="#wishlist" class="nav-action-icon" title="Wishlist">
-            <i class="bi bi-heart fs-5"></i>
-          </a>
-
-          <!-- Cart -->
-          <a href="#cart" class="nav-action-icon" title="Cart">
-            <i class="bi bi-cart3 fs-5"></i>
-          </a>
-
-          <!-- Sign In Button -->
-          <a href="#signin" class="btn btn-success nav-signin-btn d-flex align-items-center gap-2">
-            <i class="bi bi-person fs-6"></i>
-            <span>Sign In</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Slider Section -->
-  <main class="container-fluid my-4">
-    <div id="heroCarousel" class="carousel slide hero-slider-container" data-bs-ride="carousel" data-bs-interval="7000">
-      <!-- Carousel Indicators (Pagination Dots) -->
+  <!-- Full-Width Hero Slider Section (Edge-to-Edge) -->
+  <section class="hero-slider-section">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
+      <!-- Carousel Indicators (Dots) -->
       <div class="slider-pagination">
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
           aria-label="Slide 1"></button>
@@ -183,18 +178,16 @@
       <div class="carousel-inner">
         <!-- Slide 1 -->
         <div class="carousel-item active">
-          <div class="hero-slide-bg">
-            <div class="hero-slide-overlay">
-              <div class="hero-slide-content">
-                <h2 class="hero-slide-title">
-                  Fresh Products Delivered to your Door
-                </h2>
-                <p class="hero-slide-subtitle">
-                  Get 20% off your first order
-                </p>
-                <div class="d-flex flex-wrap gap-2">
-                  <a class="btn-hero-shop" href="#products">Shop Now</a>
-                  <a class="btn-hero-deals" href="#deals">View Deals</a>
+          <div class="hero-slide">
+            <div class="hero-overlay">
+              <div class="container h-100 d-flex flex-column justify-content-center">
+                <div class="hero-content">
+                  <h2 class="hero-title">Fresh Products Delivered to your Door</h2>
+                  <p class="hero-subtitle">Get 20% off your first order</p>
+                  <div class="hero-btn-group">
+                    <a class="btn-hero-shop" href="#products">Shop Now</a>
+                    <a class="btn-hero-deals" href="#deals">View Deals</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -202,19 +195,17 @@
         </div>
 
         <!-- Slide 2 -->
-        <div class="carousel-item" data-bs-interval="6000">
-          <div class="hero-slide-bg">
-            <div class="hero-slide-overlay">
-              <div class="hero-slide-content">
-                <h2 class="hero-slide-title">
-                  Premium Quality Guaranteed
-                </h2>
-                <p class="hero-slide-subtitle">
-                  Fresh from farm to your table
-                </p>
-                <div class="d-flex flex-wrap gap-2">
-                  <a class="btn-hero-shop" href="#products">Shop Now</a>
-                  <a class="btn-hero-deals" href="#about">Learn More</a>
+        <div class="carousel-item">
+          <div class="hero-slide">
+            <div class="hero-overlay">
+              <div class="container h-100 d-flex flex-column justify-content-center">
+                <div class="hero-content">
+                  <h2 class="hero-title">Premium Quality Guaranteed</h2>
+                  <p class="hero-subtitle">Fresh from farm to your table</p>
+                  <div class="hero-btn-group">
+                    <a class="btn-hero-shop" href="#products">Shop Now</a>
+                    <a class="btn-hero-deals" href="#about">Learn More</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -222,19 +213,17 @@
         </div>
 
         <!-- Slide 3 -->
-        <div class="carousel-item" data-bs-interval="6000">
-          <div class="hero-slide-bg">
-            <div class="hero-slide-overlay">
-              <div class="hero-slide-content">
-                <h2 class="hero-slide-title">
-                  Fast &amp; Free Delivery
-                </h2>
-                <p class="hero-slide-subtitle">
-                  Same day delivery available
-                </p>
-                <div class="d-flex flex-wrap gap-2">
-                  <a class="btn-hero-shop" href="#products">Order Now</a>
-                  <a class="btn-hero-deals" href="#delivery">Delivery Info</a>
+        <div class="carousel-item">
+          <div class="hero-slide">
+            <div class="hero-overlay">
+              <div class="container h-100 d-flex flex-column justify-content-center">
+                <div class="hero-content">
+                  <h2 class="hero-title">Fast &amp; Free Delivery</h2>
+                  <p class="hero-subtitle">Same day delivery available</p>
+                  <div class="hero-btn-group">
+                    <a class="btn-hero-shop" href="#products">Order Now</a>
+                    <a class="btn-hero-deals" href="#delivery">Delivery Info</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -242,17 +231,175 @@
         </div>
       </div>
 
-      <!-- Navigation Arrows -->
-      <button class="slider-arrow-btn slider-arrow-prev" type="button" data-bs-target="#heroCarousel"
-        data-bs-slide="prev" aria-label="Previous">
-        <i class="bi bi-chevron-left"></i>
+      <!-- Carousel Arrow Controls -->
+      <button class="custom-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"
+        aria-label="Previous">
+        <i class="fa-solid fa-chevron-left"></i>
       </button>
-      <button class="slider-arrow-btn slider-arrow-next" type="button" data-bs-target="#heroCarousel"
-        data-bs-slide="next" aria-label="Next">
-        <i class="bi bi-chevron-right"></i>
+      <button class="custom-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Next">
+        <i class="fa-solid fa-chevron-right"></i>
       </button>
     </div>
-  </main>
+  </section>
+
+  <!-- Features Section (4 Cards) -->
+  <section class="features-section">
+    <div class="container">
+      <div class="row g-3 g-lg-4 row-cols-1 row-cols-md-2 row-cols-lg-4">
+        <!-- Feature 1: Free Shipping -->
+        <div class="col">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper feature-icon-blue">
+              <i class="fa-solid fa-truck"></i>
+            </div>
+            <div>
+              <h3 class="feature-title">Free Shipping</h3>
+              <p class="feature-desc">On orders over 500 EGP</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2: Secure Payment -->
+        <div class="col">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper feature-icon-emerald">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+              <h3 class="feature-title">Secure Payment</h3>
+              <p class="feature-desc">100% secure transactions</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3: Easy Returns -->
+        <div class="col">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper feature-icon-orange">
+              <i class="fa-solid fa-arrow-rotate-left"></i>
+            </div>
+            <div>
+              <h3 class="feature-title">Easy Returns</h3>
+              <p class="feature-desc">14-day return policy</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 4: 24/7 Support -->
+        <div class="col">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper feature-icon-purple">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div>
+              <h3 class="feature-title">24/7 Support</h3>
+              <p class="feature-desc">Dedicated support team</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop By Category Section -->
+  <section id="categories" class="category-section">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="category-header">
+        <div class="category-title-group">
+          <div class="category-accent-bar"></div>
+          <h2 class="category-main-title">Shop By <span>Category</span></h2>
+        </div>
+        <a href="#categories" class="category-view-all">
+          <span>View All Categories</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Category Cards Grid -->
+      <div class="category-grid">
+        <!-- Category 1: Music -->
+        <a href="#music" class="category-card">
+          <div class="category-card-img-wrapper">
+            <img src="./images/music.jpeg" alt="Music" class="category-card-img" />
+          </div>
+          <h3 class="category-card-name">Music</h3>
+        </a>
+
+        <!-- Category 2: Men's Fashion -->
+        <a href="#mens-fashion" class="category-card">
+          <div class="category-card-img-wrapper">
+            <img src="./images/men's-fashion.jpg" alt="Men's Fashion" class="category-card-img" />
+          </div>
+          <h3 class="category-card-name">Men's Fashion</h3>
+        </a>
+
+        <!-- Category 3: Women's Fashion -->
+        <a href="#womens-fashion" class="category-card">
+          <div class="category-card-img-wrapper">
+            <img src="./images/women's-fashion.avif" alt="Women's Fashion" class="category-card-img" />
+          </div>
+          <h3 class="category-card-name">Women's Fashion</h3>
+        </a>
+
+        <!-- Category 4: SuperMarket -->
+        <a href="#supermarket" class="category-card">
+          <div class="category-card-img-wrapper">
+            <img src="./images/supermarket.png" alt="SuperMarket" class="category-card-img" />
+          </div>
+          <h3 class="category-card-name">SuperMarket</h3>
+        </a>
+
+        <!-- Category 5: Baby & Toys -->
+        <a href="#baby-toys" class="category-card">
+          <div class="category-card-img-wrapper">
+            <img src="./images/baby-toys.png" alt="Baby & Toys" class="category-card-img" />
+          </div>
+          <h3 class="category-card-name">Baby & Toys</h3>
+        </a>
+
+        <!-- Category 6: Home -->
+        <a href="#home" class="category-card">
+          <div class="category-card-img-wrapper">
+            <img src="./images/home.png" alt="Home" class="category-card-img" />
+          </div>
+          <h3 class="category-card-name">Home</h3>
+        </a>
+
+        <!-- Category 7: Books -->
+        <a href="#books" class="category-card">
+          <div class="category-card-img-wrapper">
+            <img src="./images/books.png" alt="Books" class="category-card-img" />
+          </div>
+          <h3 class="category-card-name">Books</h3>
+        </a>
+
+        <!-- Category 8: Beauty & Health -->
+        <a href="#beauty-health" class="category-card">
+          <div class="category-card-img-wrapper">
+            <img src="./images/beauty-health.png" alt="Beauty & Health" class="category-card-img" />
+          </div>
+          <h3 class="category-card-name">Beauty & Health</h3>
+        </a>
+
+        <!-- Category 9: Mobiles -->
+        <a href="#mobiles" class="category-card">
+          <div class="category-card-img-wrapper">
+            <img src="./images/mobiles.png" alt="Mobiles" class="category-card-img" />
+          </div>
+          <h3 class="category-card-name">Mobiles</h3>
+        </a>
+
+        <!-- Category 10: Electronics -->
+        <a href="#electronics" class="category-card">
+          <div class="category-card-img-wrapper">
+            <img src="./images/electronics.png" alt="Electronics" class="category-card-img" />
+          </div>
+          <h3 class="category-card-name">Electronics</h3>
+        </a>
+      </div>
+    </div>
+  </section>
 
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
