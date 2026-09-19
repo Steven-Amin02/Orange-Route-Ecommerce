@@ -533,11 +533,25 @@
       }
     });
 
-    // Auto-initialize badges and session UI when DOM is ready
+    // Auto-initialize badges, session UI and sticky navbar elevation when DOM is ready
     const initAppState = () => {
       updateCartBadge();
       updateWishlistBadge();
       updateAuthUI();
+
+      // Dynamic sticky navbar elevation on scroll
+      const header = document.querySelector('.main-header');
+      if (header) {
+        const handleScroll = () => {
+          if (window.scrollY > 20) {
+            header.classList.add('navbar-scrolled');
+          } else {
+            header.classList.remove('navbar-scrolled');
+          }
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
+      }
     };
 
     if (document.readyState === 'loading') {
