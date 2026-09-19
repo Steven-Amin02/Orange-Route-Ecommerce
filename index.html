@@ -43,12 +43,13 @@
             </a>
           </div>
           <span class="top-divider"></span>
-          <div class="d-flex align-items-center gap-3">
-            <a href="#signin" class="top-link d-flex align-items-center gap-1.5">
+          <div class="d-flex align-items-center gap-4 text-secondary" id="top-auth-links">
+            <a href="./Pages/Login.html" class="top-link d-flex align-items-center gap-1.5">
               <i class="fa-regular fa-user" style="font-size: 0.75rem;"></i>
               <span>Sign In</span>
             </a>
-            <a href="#signup" class="top-link d-flex align-items-center gap-1.5">
+            <span class="top-divider"></span>
+            <a href="./Pages/Signup.html" class="top-link d-flex align-items-center gap-1.5">
               <i class="fa-solid fa-user-plus" style="font-size: 0.75rem;"></i>
               <span>Sign Up</span>
             </a>
@@ -80,24 +81,10 @@
 
         <!-- Navigation Menu Links -->
         <nav class="nav-menu d-none d-xl-flex" aria-label="Primary Navigation">
-          <a class="nav-menu-link" href="#">Home</a>
-          <a class="nav-menu-link" href="#">Shop</a>
-          <div class="dropdown">
-            <a class="nav-menu-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <span>Categories</span>
-              <i class="fa-solid fa-chevron-down custom-chevron ms-1"></i>
-            </a>
-            <ul class="dropdown-menu shadow border-0 mt-2 py-2">
-              <li><a class="dropdown-item" href="#categories">All Categories</a></li>
-              <li><a class="dropdown-item" href="#categories">Fresh Fruits &amp; Vegetables</a></li>
-              <li><a class="dropdown-item" href="#categories">Dairy, Bread &amp; Eggs</a></li>
-              <li><a class="dropdown-item" href="#categories">Beverages &amp; Drinks</a></li>
-              <li><a class="dropdown-item" href="#categories">Bakery &amp; Biscuits</a></li>
-              <li><a class="dropdown-item" href="#categories">Snacks &amp; Munchies</a></li>
-            </ul>
-          </div>
-          <a class="nav-menu-link" href="#">Brands</a>
+          <a class="nav-menu-link active text-success fw-bold" href="index.html">Home</a>
+          <a class="nav-menu-link" href="./Pages/Shop.html">Shop</a>
+          <a class="nav-menu-link" href="./Pages/Categories.html">Categories</a>
+          <a class="nav-menu-link" href="./Pages/Brands.html">Brands</a>
         </nav>
 
         <!-- Right Actions Group -->
@@ -114,18 +101,19 @@
           </a>
 
           <!-- Wishlist -->
-          <a href="#wishlist" class="nav-icon-link" title="Wishlist" aria-label="View Wishlist">
+          <a href="./Pages/Wishlist.html" class="nav-icon-link position-relative" title="Wishlist" aria-label="View Wishlist">
             <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            <span class="wishlist-badge">0</span>
           </a>
 
           <!-- Cart with Badge -->
           <a href="./Pages/Cart.html" class="nav-icon-link position-relative" title="Cart" aria-label="View Shopping Cart">
             <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-            <span class="cart-badge">1</span>
+            <span class="cart-badge">0</span>
           </a>
 
           <!-- Sign In Button -->
-          <a href="#signin" class="btn-nav-signin d-none d-lg-flex" aria-label="Sign In">
+          <a href="./Pages/Login.html" class="btn-nav-signin d-none d-lg-flex" aria-label="Sign In">
             <i class="fa-regular fa-user" style="font-size: 0.75rem;" aria-hidden="true"></i>
             <span>Sign In</span>
           </a>
@@ -150,14 +138,16 @@
           </button>
         </form>
         <div class="d-flex flex-column gap-2 mb-3">
-          <a class="nav-menu-link" href="#">Home</a>
-          <a class="nav-menu-link" href="#">Shop</a>
-          <a class="nav-menu-link" href="#categories">Categories</a>
-          <a class="nav-menu-link" href="#">Brands</a>
+          <a class="nav-menu-link active text-success fw-bold" href="index.html">Home</a>
+          <a class="nav-menu-link" href="./Pages/Shop.html">Shop</a>
+          <a class="nav-menu-link" href="./Pages/Categories.html">Categories</a>
+          <a class="nav-menu-link" href="./Pages/Brands.html">Brands</a>
+          <a class="nav-menu-link" href="./Pages/Wishlist.html">Wishlist</a>
+          <a class="nav-menu-link" href="./Pages/Cart.html">Shopping Cart</a>
         </div>
         <div class="pt-3 border-top d-flex gap-2">
-          <a href="#signin" class="btn btn-success flex-grow-1 rounded-pill py-2">Sign In</a>
-          <a href="#signup" class="btn btn-outline-success flex-grow-1 rounded-pill py-2">Sign Up</a>
+          <a href="./Pages/Login.html" class="btn btn-success flex-grow-1 rounded-pill py-2">Sign In</a>
+          <a href="./Pages/Signup.html" class="btn btn-outline-success flex-grow-1 rounded-pill py-2">Sign Up</a>
         </div>
       </div>
     </nav>
@@ -902,12 +892,12 @@
         <div class="col-6 col-md-3 col-lg-2">
           <h3 class="footer-heading">Shop</h3>
           <ul class="footer-links">
-            <li><a href="#products">All Products</a></li>
-            <li><a href="#categories">Categories</a></li>
-            <li><a href="#brands">Brands</a></li>
-            <li><a href="#electronics">Electronics</a></li>
-            <li><a href="#mens-fashion">Men's Fashion</a></li>
-            <li><a href="#womens-fashion">Women's Fashion</a></li>
+            <li><a href="./Pages/Shop.html">All Products</a></li>
+            <li><a href="./Pages/Categories.html">Categories</a></li>
+            <li><a href="./Pages/Brands.html">Brands</a></li>
+            <li><a href="./Pages/Shop.html">Electronics</a></li>
+            <li><a href="./Pages/Shop.html">Men's Fashion</a></li>
+            <li><a href="./Pages/Shop.html">Women's Fashion</a></li>
           </ul>
         </div>
 
@@ -915,12 +905,11 @@
         <div class="col-6 col-md-3 col-lg-2">
           <h3 class="footer-heading">Account</h3>
           <ul class="footer-links">
-            <li><a href="#account">My Account</a></li>
-            <li><a href="#orders">Order History</a></li>
-            <li><a href="#wishlist">Wishlist</a></li>
-            <li><a href="#cart">Shopping Cart</a></li>
-            <li><a href="#login">Sign In</a></li>
-            <li><a href="#register">Create Account</a></li>
+            <li><a href="./Pages/Login.html">My Account</a></li>
+            <li><a href="./Pages/Wishlist.html">Wishlist</a></li>
+            <li><a href="./Pages/Cart.html">Shopping Cart</a></li>
+            <li><a href="./Pages/Login.html">Sign In</a></li>
+            <li><a href="./Pages/Signup.html">Create Account</a></li>
           </ul>
         </div>
 
@@ -976,6 +965,7 @@
   </footer>
 
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./JS/utilities.js"></script>
   <script src="./JS/Main.js"></script>
 </body>
 

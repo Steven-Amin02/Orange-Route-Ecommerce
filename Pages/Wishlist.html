@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Featured Brands - FreshCart</title>
-  <meta name="description" content="Shop top global and local brands across groceries, electronics, and fashion on FreshCart." />
+  <title>My Wishlist - FreshCart</title>
+  <meta name="description" content="View and manage your saved products in your FreshCart wishlist." />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <!-- Bootstrap CSS -->
@@ -56,8 +56,7 @@
 
         <!-- Search Form -->
         <div class="search-form d-none d-lg-flex position-relative m-0">
-          <label for="brands-search-input" class="visually-hidden">Search brands</label>
-          <input id="brands-search-input" class="search-input" type="search" placeholder="Search brand by name..." aria-label="Search brands" />
+          <input class="search-input" type="search" placeholder="Search products, brands and more..." aria-label="Search products" />
           <button class="search-btn" type="button" title="Search" aria-label="Search">
             <i class="fa-solid fa-magnifying-glass" style="font-size: 0.875rem;" aria-hidden="true"></i>
           </button>
@@ -68,13 +67,13 @@
           <a class="nav-menu-link" href="../index.html">Home</a>
           <a class="nav-menu-link" href="Shop.html">Shop</a>
           <a class="nav-menu-link" href="Categories.html">Categories</a>
-          <a class="nav-menu-link active text-success fw-bold" href="Brands.html">Brands</a>
+          <a class="nav-menu-link" href="Brands.html">Brands</a>
         </nav>
 
         <!-- Right Actions Group -->
         <div class="d-flex align-items-center gap-2">
-          <a href="Wishlist.html" class="nav-icon-link position-relative" title="Wishlist" aria-label="View Wishlist">
-            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+          <a href="Wishlist.html" class="nav-icon-link position-relative text-success" title="Wishlist" aria-label="View Wishlist">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i>
             <span class="wishlist-badge">0</span>
           </a>
           <a href="Cart.html" class="nav-icon-link position-relative" title="Cart" aria-label="View Shopping Cart">
@@ -86,7 +85,7 @@
             <span>Sign In</span>
           </a>
           <button class="btn border-0 p-2 d-xl-none text-dark fs-4" type="button" data-bs-toggle="collapse"
-            data-bs-target="#mobileBrandNav" aria-controls="mobileBrandNav" aria-expanded="false" aria-label="Toggle navigation">
+            data-bs-target="#mobileWishNav2" aria-controls="mobileWishNav2" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-solid fa-bars" aria-hidden="true"></i>
           </button>
         </div>
@@ -94,14 +93,14 @@
     </div>
 
     <!-- Mobile Nav -->
-    <nav class="collapse d-xl-none border-top bg-white" id="mobileBrandNav" aria-label="Mobile Navigation">
+    <nav class="collapse d-xl-none border-top bg-white" id="mobileWishNav2" aria-label="Mobile Navigation">
       <div class="container py-3">
         <div class="d-flex flex-column gap-2 mb-3">
           <a class="nav-menu-link" href="../index.html">Home</a>
           <a class="nav-menu-link" href="Shop.html">Shop</a>
           <a class="nav-menu-link" href="Categories.html">Categories</a>
-          <a class="nav-menu-link text-success fw-bold" href="Brands.html">Brands</a>
-          <a class="nav-menu-link" href="Wishlist.html">Wishlist</a>
+          <a class="nav-menu-link" href="Brands.html">Brands</a>
+          <a class="nav-menu-link text-success fw-bold" href="Wishlist.html">Wishlist</a>
           <a class="nav-menu-link" href="Cart.html">Shopping Cart</a>
         </div>
       </div>
@@ -114,23 +113,28 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-1">
           <li class="breadcrumb-item"><a href="../index.html" class="text-decoration-none text-secondary">Home</a></li>
-          <li class="breadcrumb-item active text-dark fw-medium" aria-current="page">Brands</li>
+          <li class="breadcrumb-item active text-dark fw-medium" aria-current="page">Wishlist</li>
         </ol>
       </nav>
       <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
         <div>
-          <h1 class="page-header-title">Our Partner Brands</h1>
-          <p class="text-secondary small mb-0">Shop authentic products directly from certified world-class brands.</p>
+          <h1 class="page-header-title">My Saved Wishlist</h1>
+          <p class="text-secondary small mb-0">Items you have bookmarked to purchase later.</p>
         </div>
-        <span class="badge bg-success px-3 py-2 fs-6 rounded-pill" id="brands-count-badge">Loading...</span>
+        <div class="d-flex align-items-center gap-3">
+          <span class="badge bg-light text-dark border px-3 py-2 fs-6 rounded-pill" id="wishlist-count-text">0 items</span>
+          <button type="button" class="btn btn-outline-danger btn-sm rounded-pill px-3" id="wishlist-clear-all-btn">
+            <i class="fa-solid fa-trash-can me-1" aria-hidden="true"></i>Clear All
+          </button>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- ================= MAIN BRANDS SECTION ================= -->
-  <main class="py-5" id="brands-main-content">
+  <!-- ================= MAIN WISHLIST SECTION ================= -->
+  <main class="py-5" id="wishlist-main-content">
     <div class="container">
-      <div class="row g-4" id="brands-grid">
+      <div id="wishlist-items-container">
         <!-- Rendered dynamically by JS -->
       </div>
     </div>
@@ -187,7 +191,7 @@
         <div class="col-lg-4">
           <img src="../freshcart-logo.svg" alt="FreshCart" height="32" class="mb-3" />
           <p class="footer-desc">
-            FreshCart offers authentic products from verified global manufacturers.
+            FreshCart lets you save favorite items and enjoy seamless online shopping.
           </p>
         </div>
         <div class="col-6 col-md-3 col-lg-2">
@@ -208,8 +212,8 @@
           </ul>
         </div>
         <div class="col-6 col-md-3 col-lg-4">
-          <h4 class="footer-heading">Need Assistance?</h4>
-          <p class="small text-secondary mb-1">Our support team is available 24/7.</p>
+          <h4 class="footer-heading">Need Help?</h4>
+          <p class="small text-secondary mb-1">Our support team is always ready to assist.</p>
           <p class="fw-bold text-success mb-0">+1 (800) 123-4567</p>
         </div>
       </div>
@@ -221,7 +225,7 @@
 
   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../JS/utilities.js"></script>
-  <script src="../JS/brands.js"></script>
+  <script src="../JS/wishlist.js"></script>
 </body>
 
 </html>

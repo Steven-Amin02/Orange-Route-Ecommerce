@@ -42,11 +42,12 @@
             <span>support@freshcart.com</span>
           </a>
           <span class="top-divider"></span>
-          <div class="d-flex align-items-center gap-3">
+          <div class="d-flex align-items-center gap-4 text-secondary" id="top-auth-links">
             <a href="Login.html" class="top-link d-flex align-items-center gap-1">
               <i class="fa-regular fa-user" style="font-size: 0.75rem;"></i>
               <span>Sign In</span>
             </a>
+            <span class="top-divider"></span>
             <a href="Signup.html" class="top-link d-flex align-items-center gap-1">
               <i class="fa-solid fa-user-plus" style="font-size: 0.75rem;"></i>
               <span>Sign Up</span>
@@ -110,19 +111,20 @@
           </a>
 
           <!-- Wishlist -->
-          <a href="Whislist.html" class="nav-icon-link" title="Wishlist">
+          <a href="Wishlist.html" class="nav-icon-link position-relative" title="Wishlist">
             <i class="fa-regular fa-heart"></i>
+            <span class="wishlist-badge">0</span>
           </a>
 
           <!-- Cart with Badge -->
           <a href="Cart.html" class="nav-icon-link position-relative" title="Cart">
             <i class="fa-solid fa-cart-shopping"></i>
-            <span class="cart-badge">2</span>
+            <span class="cart-badge">0</span>
           </a>
 
           <!-- Sign In Button -->
-          <a href="Login.html" class="btn-header-signin d-none d-lg-inline-flex">
-            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          <a href="Login.html" class="btn-header-signin btn-nav-signin d-none d-lg-inline-flex">
+            <i class="fa-regular fa-user" style="font-size: 0.75rem;"></i>
             <span>Sign In</span>
           </a>
 
@@ -429,7 +431,7 @@
           <ul class="footer-links">
             <li><a href="Login.html">My Account</a></li>
             <li><a href="#orders">Order History</a></li>
-            <li><a href="Whislist.html">Wishlist</a></li>
+            <li><a href="Wishlist.html">Wishlist</a></li>
             <li><a href="Cart.html">Shopping Cart</a></li>
             <li><a href="Login.html">Sign In</a></li>
             <li><a href="Signup.html">Create Account</a></li>
@@ -488,6 +490,7 @@
   </footer>
 
   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../JS/utilities.js"></script>
   <script src="../JS/cart.js"></script>
 </body>
 

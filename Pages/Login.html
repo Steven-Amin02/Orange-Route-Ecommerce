@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In - FreshCart</title>
+  <meta name="description" content="Sign in to your FreshCart account to manage orders, wishlists, and express checkout." />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+
+  <!-- ================= TOP HEADER ================= -->
+  <div class="top-header d-none d-lg-block">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center top-inner">
+        <div class="d-flex align-items-center gap-4 text-secondary">
+          <span><i class="fa-solid fa-truck text-success me-1"></i> Free Shipping on Orders 500 EGP</span>
+        </div>
+        <div class="d-flex align-items-center gap-4">
+          <a href="tel:+18001234567" class="top-link"><i class="fa-solid fa-phone me-1"></i> +1 (800) 123-4567</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN NAVBAR HEADER ================= -->
+  <header class="main-header" role="banner">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between main-header-inner gap-3">
+        <a class="navbar-brand" href="../index.html" aria-label="FreshCart Home">
+          <img src="../freshcart-logo.svg" alt="FreshCart Logo" height="32" />
+        </a>
+        <nav class="nav-menu d-none d-md-flex gap-3">
+          <a class="nav-menu-link" href="../index.html">Home</a>
+          <a class="nav-menu-link" href="Shop.html">Shop</a>
+          <a class="nav-menu-link" href="Categories.html">Categories</a>
+          <a class="nav-menu-link" href="Brands.html">Brands</a>
+        </nav>
+        <div>
+          <a href="Signup.html" class="btn btn-outline-success btn-sm rounded-pill px-3">
+            Create Account
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= AUTH SECTION ================= -->
+  <main class="auth-wrapper">
+    <div class="auth-card">
+      <div class="text-center mb-4">
+        <a href="../index.html">
+          <img src="../freshcart-logo.svg" alt="FreshCart" class="auth-brand-logo" />
+        </a>
+        <h1 class="auth-heading">Welcome Back</h1>
+        <p class="auth-subheading">Enter your credentials to access your account.</p>
+      </div>
+
+      <!-- Alert Box -->
+      <div id="auth-alert-box" class="d-none" role="alert"></div>
+
+      <!-- Login Form -->
+      <form id="login-form" novalidate>
+        <div class="form-input-group">
+          <label for="login-email">Email Address</label>
+          <input type="email" id="login-email" class="form-input-field" placeholder="name@example.com" required autocomplete="email" />
+          <div class="form-feedback-invalid">Please enter a valid email address.</div>
+        </div>
+
+        <div class="form-input-group">
+          <div class="d-flex justify-content-between align-items-center">
+            <label for="login-password">Password</label>
+            <a href="#" class="small text-success text-decoration-none">Forgot password?</a>
+          </div>
+          <input type="password" id="login-password" class="form-input-field" placeholder="••••••••" required autocomplete="current-password" />
+          <i class="fa-regular fa-eye password-toggle-icon" data-target="login-password" title="Toggle password visibility" aria-hidden="true"></i>
+          <div class="form-feedback-invalid">Password must be at least 6 characters.</div>
+        </div>
+
+        <div class="d-flex align-items-center mb-4">
+          <input class="form-check-input me-2" type="checkbox" id="remember-me" checked />
+          <label class="form-check-label small text-secondary" for="remember-me">
+            Remember me on this device
+          </label>
+        </div>
+
+        <button type="submit" class="btn-auth-primary" id="btn-login-submit">
+          <span>Sign In</span>
+          <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <div class="text-center mt-4 pt-2 border-top">
+        <p class="small text-secondary mb-0">
+          Don't have an account? <a href="Signup.html" class="text-success fw-bold text-decoration-none">Sign up now</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer-bottom-bar py-4 border-top text-center text-secondary small">
+    <div class="container">
+      &copy; 2026 FreshCart Inc. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../JS/utilities.js"></script>
+  <script src="../JS/auth.js"></script>
+</body>
+
+</html>
